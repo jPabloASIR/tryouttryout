@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Playground TCG - Menú</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Playground TCG</h1>
+
+  <!-- Menú principal -->
+  <div id="menu-container">
+    <button class="nuevo-boton" onclick="goToGame()">Jugar</button>
+    <button class="nuevo-boton" onclick="openMenu('submenu-decks')">Decks</button>
+    <button class="nuevo-boton" onclick="openMenu('submenu-cards')">Cartas</button>
+  </div>
+
+  <!-- Submenú Decks -->
+  <div class="submenu" id="submenu-decks">
+    <div class="section-title">Decks</div>
+    <button class="nuevo-boton" onclick="openMenu('submenu-your-decks')">Tus Decks</button>
+    <button class="nuevo-boton" onclick="openMenu('submenu-prebuilt')">Decks Prehechos</button>
+    <button class="nuevo-boton volver" onclick="backToMain()">Volver</button>
+  </div>
+
+  <!-- Submenú Tus Decks -->
+  <div class="submenu" id="submenu-your-decks">
+    <div class="section-title">Tus Decks</div>
+    <button class="nuevo-boton" onclick="alert('Ver Deck')">Ver Deck</button>
+    <button class="nuevo-boton" onclick="alert('Crear Deck')">Crear Deck</button>
+    <button class="nuevo-boton" onclick="alert('Borrar Deck')">Borrar Deck</button>
+    <button class="nuevo-boton volver" onclick="openMenu('submenu-decks')">Volver</button>
+  </div>
+
+  <!-- Submenú Decks Prehechos -->
+  <div class="submenu" id="submenu-prebuilt">
+    <div class="section-title">Decks Prehechos</div>
+    <div id="prebuilt-list"></div>
+    <button class="nuevo-boton volver" onclick="openMenu('submenu-decks')">Volver</button>
+  </div>
+
+  <!-- Submenú Cartas -->
+<div class="submenu" id="submenu-cards">
+  <!-- Mini-menú de sets -->
+  <div id="sets-menu">
+    <button class="nuevo-boton" onclick="showSet('Base Set')">Base Set</button>
+    <button class="nuevo-boton" onclick="showSet('Jungle')">Jungle</button>
+    <button class="nuevo-boton" onclick="showSet('Fossil')">Fossil</button>
+    <button class="nuevo-boton" onclick="showSet('Team Rocket')">Team Rocket</button>
+    <button class="nuevo-boton" onclick="showSet('Base Set 2')">Base Set 2</button>
+    <button class="nuevo-boton volver" onclick="backToMain()">Volver</button>
+  </div>
+
+  <!-- Contenedor de cartas de un set -->
+  <div id="cards-grid" style="display:none;">
+    <button class="nuevo-boton volver" style="align-self:flex-start;margin-bottom:10px;" onclick="backToSets()">Volver</button>
+    <div id="cards-list" class="cards-gallery"></div>
+  </div>
+</div>
+
+  <script>
+    // Menús
+    function openMenu(id) {
+      document.querySelectorAll('.submenu, #menu-container').forEach(menu => {
+        menu.style.display = "none";
+      });
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function backToMain() {
+      document.querySelectorAll('.submenu').forEach(menu => {
+        menu.style.display = "none";
+      });
+      document.getElementById("menu-container").style.display = "flex";
+    }
+
+    function goToGame() {
+      window.location.href = "table.html";
+    }
+
+    // Decks prehechos
+    const prebuiltDecks = {
+      "Deck de Fuego": ["Carta F1", "Carta F2", "Carta F3"],
+      "Deck de Agua": ["Carta A1", "Carta A2", "Carta A3"],
+      "Deck de Tierra": ["Carta T1", "Carta T2", "Carta T3"]
+    };
+
+    const prebuiltList = document.getElementById("prebuilt-list");
+    for (let deckName in prebuiltDecks) {
+      const btn = document.createElement("button");
+      btn.className = "nuevo-boton";
+      btn.textContent = deckName;
+      btn.onclick = () => showDeck(prebuiltDecks[deckName], deckName);
+      prebuiltList.appendChild(btn);
+    }
+
+    function showDeck(cards, deckName) {
+      prebuiltList.innerHTML = `<div class="section-title">${deckName}</div>`;
+      cards.forEach(card => {
+        const btn = document.createElement("button");
+        btn.className = "nuevo-boton";
+        btn.textContent = card;
+        prebuiltList.appendChild(btn);
+      });
+      const backBtn = document.createElement("button");
+      backBtn.className = "nuevo-boton volver";
+      backBtn.textContent = "Volver";
+      backBtn.onclick = () => {
+        prebuiltList.innerHTML = "";
+        for (let deckName in prebuiltDecks) {
+          const btn = document.createElement("button");
+          btn.className = "nuevo-boton";
+          btn.textContent = deckName;
+          btn.onclick = () => showDeck(prebuiltDecks[deckName], deckName);
+          prebuiltList.appendChild(btn);
+        }
+      };
+      prebuiltList.appendChild(backBtn);
+    }
+
+    // Cartas
+    let allCardsData = [];
+
+    fetch("cards.json")
+      .then(response => response.json())
+      .then(cards => {
+        allCardsData = cards;
+      })
+      .catch(error => console.error("Error cargando cartas:", error));
+
+    function showSet(setName) {
+      document.getElementById('sets-menu').style.display = 'none';
+      const cardsGrid = document.getElementById('cards-grid');
+      const cardsListDiv = document.getElementById('cards-list');
+      cardsListDiv.innerHTML = '';
+
+      const filteredCards = allCardsData.filter(card => card.set === setName);
+
+      filteredCards.forEach(card => {
+        const div = document.createElement("div");
+        div.className = "card-item";
+        div.innerHTML = `<img src="${card.image}" alt="${card.name}">`;
+        cardsListDiv.appendChild(div);
+      });
+
+      cardsGrid.style.display = 'block'; // mostramos el grid
+    }
+
+    function backToSets() {
+      document.getElementById('cards-grid').style.display = 'none';
+      document.getElementById('sets-menu').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

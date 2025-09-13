@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Playground TCG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Playground TCG - 2 Jugadores</h1>
+
+  <div id="game-container">
+    <!-- Jugador 2 -->
+    <div class="player-zone" id="player2">
+      <h2>Jugador 2</h2>
+      <div class="hand" id="hand2"></div>
+      <div class="field" id="field2"></div>
+      <div class="actions" id="actions2">
+        <button onclick="drawCard(2)">Robar carta</button>
+        <button onclick="endTurn()">Terminar turno</button>
+      </div>
+    </div>
+
+    <!-- Panel de mensajes -->
+    <div id="log"></div>
+
+    <!-- Jugador 1 -->
+    <div class="player-zone" id="player1">
+      <h2>Jugador 1</h2>
+      <div class="hand" id="hand1"></div>
+      <div class="field" id="field1"></div>
+      <div class="actions" id="actions1">
+        <button onclick="drawCard(1)">Robar carta</button>
+        <button onclick="endTurn()">Terminar turno</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

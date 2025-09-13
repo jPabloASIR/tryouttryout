@@ -1,0 +1,839 @@
+[
+  {
+    "id": "base1-1",
+    "name": "Alakazam",
+    "type": "Psychic",
+    "hp": 60,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Confuse Ray", "damage": "10" },
+      { "name": "Psychic", "damage": "30+" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/1.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-2",
+    "name": "Blastoise",
+    "type": "Water",
+    "hp": 100,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Bubble", "damage": "20" },
+      { "name": "Hydro Pump", "damage": "40+" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/2.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-3",
+    "name": "Chansey",
+    "type": "Colorless",
+    "hp": 120,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Double-Edge", "damage": "80" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/3.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-4",
+    "name": "Charizard",
+    "type": "Fire",
+    "hp": 120,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Slash", "damage": "40" },
+      { "name": "Fire Spin", "damage": "100" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/4.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-5",
+    "name": "Clefairy",
+    "type": "Colorless",
+    "hp": 60,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Metronome", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/5.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-6",
+    "name": "Gyarados",
+    "type": "Water",
+    "hp": 100,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Bite", "damage": "30" },
+      { "name": "Dragon Rage", "damage": "40" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/6.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-7",
+    "name": "Hitmonchan",
+    "type": "Fighting",
+    "hp": 70,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Jab", "damage": "20" },
+      { "name": "Special Punch", "damage": "40" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/7.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-8",
+    "name": "Machamp",
+    "type": "Fighting",
+    "hp": 100,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Low Kick", "damage": "30" },
+      { "name": "Submission", "damage": "60" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/8.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-9",
+    "name": "Magneton",
+    "type": "Lightning",
+    "hp": 60,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Sonicboom", "damage": "20" },
+      { "name": "Thunder Wave", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/9.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-10",
+    "name": "Mewtwo",
+    "type": "Psychic",
+    "hp": 60,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Barrier", "damage": "0" },
+      { "name": "Psychic", "damage": "30+" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/10.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-11",
+    "name": "Nidoking",
+    "type": "Poison",
+    "hp": 90,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Horn Drill", "damage": "60" },
+      { "name": "Toxic", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/11.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-12",
+    "name": "Ninetales",
+    "type": "Fire",
+    "hp": 60,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Confuse Ray", "damage": "10" },
+      { "name": "Flamethrower", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/12.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-13",
+    "name": "Poliwrath",
+    "type": "Water",
+    "hp": 90,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Bubblebeam", "damage": "30" },
+      { "name": "Hypnosis", "damage": "0" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/13.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-14",
+    "name": "Raichu",
+    "type": "Lightning",
+    "hp": 60,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Thunderbolt", "damage": "60" },
+      { "name": "Thunder", "damage": "100" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/14.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-15",
+    "name": "Venusaur",
+    "type": "Grass",
+    "hp": 80,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Razor Leaf", "damage": "40" },
+      { "name": "SolarBeam", "damage": "60" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/15.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-16",
+    "name": "Zapdos",
+    "type": "Lightning",
+    "hp": 90,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Thunder", "damage": "100" },
+      { "name": "Thunderbolt", "damage": "60" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/16.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-17",
+    "name": "Beedrill",
+    "type": "Grass",
+    "hp": 80,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Twineedle", "damage": "30" },
+      { "name": "Poison Sting", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/17.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-18",
+    "name": "Dragonair",
+    "type": "Dragon",
+    "hp": 80,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Slam", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/18.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-19",
+    "name": "Dugtrio",
+    "type": "Fighting",
+    "hp": 70,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Earthquake", "damage": "40" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/19.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-20",
+    "name": "Electabuzz",
+    "type": "Lightning",
+    "hp": 70,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Thundershock", "damage": "10" },
+      { "name": "Thunderpunch", "damage": "30+" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/20.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-21",
+    "name": "Electrode",
+    "type": "Lightning",
+    "hp": 80,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Leek Slap", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/21.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-22",
+    "name": "Pidgeotto",
+    "type": "Colorless",
+    "hp": 60,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Drill Peck", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/22.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-23",
+    "name": "Arcanine",
+    "type": "Fire",
+    "hp": 100,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Fire Spin", "damage": "50" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/23.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-24",
+    "name": "Charmeleon",
+    "type": "Fire",
+    "hp": 80,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Lick", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/24.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-25",
+    "name": "Dewgong",
+    "type": "Water",
+    "hp": 80,
+    "rarity": "Rare Holo",
+    "attacks": [
+      { "name": "Nightmare", "damage": "20" },
+      { "name": "Shadow Punch", "damage": "40" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/25.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-26",
+    "name": "Dratini",
+    "type": "Colorless",
+    "hp": 40,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Bite", "damage": "20" },
+      { "name": "Wing Attack", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/26.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-27",
+    "name": "Farfetch'd",
+    "type": "Colorless",
+    "hp": 50,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Rock Throw", "damage": "50" },
+      { "name": "Explosion", "damage": "60" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/27.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-28",
+    "name": "Growlithe",
+    "type": "Fire",
+    "hp": 60,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Rock Throw", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/28.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-29",
+    "name": "Haunter",
+    "type": "Psychic",
+    "hp": 60,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bite", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/29.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-30",
+    "name": "Ivysaur",
+    "type": "Grass",
+    "hp": 60,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Vine Whip", "damage": "20" },
+      { "name": "Poison Powder", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/30.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-31",
+    "name": "Jynx",
+    "type": "Psychic",
+    "hp": 70,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Lullaby", "damage": "0" },
+      { "name": "Pound", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/31.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-32",
+    "name": "Kadabra",
+    "type": "Psychic",
+    "hp": 60,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Teleport", "damage": "0" },
+      { "name": "Confuse Ray", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/32.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-33",
+    "name": "Kakuna",
+    "type": "Grass",
+    "hp": 80,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Comet Punch", "damage": "30" },
+      { "name": "Rage", "damage": "40+" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/33.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-34",
+    "name": "Machoke",
+    "type": "Fighting",
+    "hp": 80,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Meditate", "damage": "0" },
+      { "name": "Barrier", "damage": "0" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/34.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-35",
+    "name": "Magikarp",
+    "type": "Water",
+    "hp": 30,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Horn Attack", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/35.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-36",
+    "name": "Magmar",
+    "type": "Fire",
+    "hp": 50,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Horn Attack", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/36.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-37",
+    "name": "Nidorino",
+    "type": "Grass",
+    "hp": 60,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Bite", "damage": "20" },
+      { "name": "Poison Sting", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/37.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-38",
+    "name": "Poliwhirl",
+    "type": "Water",
+    "hp": 80,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Water Gun", "damage": "20" },
+      { "name": "Hypnosis", "damage": "0" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/38.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-39",
+    "name": "Psyduck",
+    "type": "Water",
+    "hp": 50,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Headache", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/39.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-40",
+    "name": "Raticate",
+    "type": "Colorless",
+    "hp": 60,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bite", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/40.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-41",
+    "name": "Seel",
+    "type": "Water",
+    "hp": 60,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Scratch", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/41.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-42",
+    "name": "Wartortle",
+    "type": "Water",
+    "hp": 70,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Thunder Jolt", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/42.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-43",
+    "name": "Abra",
+    "type": "Psychic",
+    "hp": 30,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bubble", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/43.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-44",
+    "name": "Bulbasaur",
+    "type": "Grass",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Vine Whip", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/44.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-45",
+    "name": "Caterpie",
+    "type": "Grass",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Tackle", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/45.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-46",
+    "name": "Charmander",
+    "type": "Fire",
+    "hp": 50,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Scratch", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/46.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-47",
+    "name": "Diglett",
+    "type": "Fighting",
+    "hp": 30,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bone Club", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/47.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-48",
+    "name": "Doduo",
+    "type": "Colorless",
+    "hp": 50,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Dig", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/48.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-49",
+    "name": "Drowzee",
+    "type": "Psychic",
+    "hp": 50,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Wrap", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/49.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-50",
+    "name": "Gastly",
+    "type": "Psychic",
+    "hp": 30,
+    "rarity": "Uncommon",
+  "attacks": [ { "name": "Thunder Shock", "damage": "20" } ], 
+  "image": "https://images.pokemontcg.io/base1/50.png", 
+  "set": "Base Set" 
+  }, 
+  { 
+   "id": "base1-51", 
+   "name": "Koffing", 
+   "type": "Grass", 
+   "hp": 50, 
+   "rarity": "Common", 
+   "attacks": [ { "name": "Hypnosis", "damage": "0" } ], 
+   "image": "https://images.pokemontcg.io/base1/51.png", 
+   "set": "Base Set" 
+   }, 
+   { 
+   "id": "base1-52", 
+   "name": "Machop", 
+   "type": "Fighting", 
+   "hp": 50, 
+   "rarity": "Rare Holo", 
+   "attacks": [ { "name": "Jab", "damage": "20" }, { "name": "Special Punch", "damage": "40" } ], 
+   "image": "https://images.pokemontcg.io/base1/52.png", 
+   "set": "Base Set" 
+   }, 
+  { 
+    "id": "base1-53", 
+    "name": "Magnemite", 
+    "type": "Electric", 
+    "hp": 40, 
+    "rarity": "Common", 
+    "attacks": [ { "name": "Bubble", "damage": "10" } ], 
+    "image": "https://images.pokemontcg.io/base1/53.png", 
+    "set": "Base Set" 
+  }, 
+  { 
+    "id": "base1-54", 
+    "name": "Metapod", 
+    "type": "Grass", 
+    "hp": 70, 
+    "rarity": "Rare", 
+    "attacks": [ { "name": "Meditate", "damage": "0" }, { "name": "Psybeam", "damage": "30" } ], 
+    "image": "https://images.pokemontcg.io/base1/54.png", 
+    "set": "Base Set" 
+  }, 
+  { 
+    "id": "base1-55", 
+    "name": "Nidoran♂", 
+    "type": "Grass", 
+    "hp": 40, 
+    "rarity": "Uncommon", 
+    "attacks": [ { "name": "Vine Whip", "damage": "20" }, { "name": "Poison Powder", "damage": "10" } ], 
+    "image": "https://images.pokemontcg.io/base1/55.png", 
+    "set": "Base Set" 
+  }, 
+  { 
+    "id": "base1-56", 
+    "name": "Onix", 
+    "type": "Fighting", 
+    "hp": 90, 
+    "rarity": "Rare", 
+    "attacks": [ { "name": "Rock Throw", "damage": "10" }, { "name": "Harden", "damage": "0" } ], 
+    "image": "https://images.pokemontcg.io/base1/56.png", 
+    "set": "Base Set" 
+  },
+  {
+    "id": "base1-57",
+    "name": "Pidgey",
+    "type": "Colorless",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Gust", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/57.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-58",
+    "name": "Pikachu",
+    "type": "Electric",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bite", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/58.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-59",
+    "name": "Poliwag",
+    "type": "Water",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Scratch", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/59.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-60",
+    "name": "Ponyta",
+    "type": "Fire",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Headbutt", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/60.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-61",
+    "name": "Rattata",
+    "type": "Colorless",
+    "hp": 30,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Peck", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/61.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-62",
+    "name": "Sandshrew",
+    "type": "Fighting",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Bubble", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/62.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-63",
+    "name": "Squirtle",
+    "type": "Water",
+    "hp": 40,
+    "rarity": "Rare",
+    "attacks": [
+      { "name": "Recover", "damage": "0" },
+      { "name": "Star Freeze", "damage": "30" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/63.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-64",
+    "name": "Starmie",
+    "type": "Water",
+    "hp": 60,
+    "rarity": "Common",
+    "attacks": [
+      { "name": "Swift", "damage": "20" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/64.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-65",
+    "name": "Staryu",
+    "type": "Water",
+    "hp": 40,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Bind", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/65.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-66",
+    "name": "Tangela",
+    "type": "Grass",
+    "hp": 50,
+    "rarity": "Uncommon",
+    "attacks": [
+      { "name": "Bind", "damage": "10" }
+    ],
+    "image": "https://images.pokemontcg.io/base1/66.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-67", 
+    "name": "Voltorb",
+    "type": "Lightning",
+    "hp": 40,
+    "rarity": "Common",
+    "attacks": [ { "name": "Tackle", "damage": "10" } ],
+    "image": "https://images.pokemontcg.io/base1/67.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-68",
+    "name": "Vulpix",
+    "type": "Fire",
+    "hp": 50,
+    "rarity": "Common", 
+    "attacks": [ { "name": "Flame Tail", "damage": "10" } ], 
+    "image": "https://images.pokemontcg.io/base1/68.png", 
+    "set": "Base Set" 
+  },
+  { 
+  "id": "base1-69", 
+  "name": "Weedle", 
+  "type": "Grass", 
+  "hp": 40, 
+  "rarity": "Common", 
+  "attacks": [ 
+    { "name": "Poison Sting", "damage": "10" } 
+    ], 
+    "image": "https://images.pokemontcg.io/base1/69.png", 
+    "set": "Base Set" 
+    } 
+]
