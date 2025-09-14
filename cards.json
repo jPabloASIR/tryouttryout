@@ -835,5 +835,14 @@
     ], 
     "image": "https://images.pokemontcg.io/base1/69.png", 
     "set": "Base Set" 
-    } 
+    },
+  {
+  "id": "base1-77",
+  "name": "Potion",
+  "supertype": "Trainer",
+  "rarity": "Common",
+  "effect": "Remove up to 2 damage counters from one of your Pokémon.",
+  "image": "https://images.pokemontcg.io/base1/77.png",
+  "set": "Base Set"
+}
 ]
