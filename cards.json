@@ -3,11 +3,15 @@
     "id": "base1-1",
     "name": "Alakazam",
     "type": "Psychic",
-    "hp": 60,
+    "hp": 80,
     "rarity": "Rare Holo",
+    "pokemon_power": "Damage Swap: As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to another as long as you don't Knock Out that Pokémon. This power can't be used if Alakazam is Asleep, Confused, or Paralyzed.",
     "attacks": [
-      { "name": "Confuse Ray", "damage": "10" },
-      { "name": "Psychic", "damage": "30+" }
+      {
+        "name": "Confuse Ray",
+        "damage": "30",
+        "cost": ["Psychic", "Psychic", "Psychic"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/1.png",
     "set": "Base Set"
@@ -18,9 +22,13 @@
     "type": "Water",
     "hp": 100,
     "rarity": "Rare Holo",
+    "pokemon_power": "Rain Dance: As often as you like during your turn (before your attack), you may attach 1 Water Energy card to 1 of your Water Pokémon. This power can't be used if Blastoise is Asleep, Confused, or Paralyzed.",
     "attacks": [
-      { "name": "Bubble", "damage": "20" },
-      { "name": "Hydro Pump", "damage": "40+" }
+      {
+        "name": "Hydro Pump",
+        "damage": "40+",
+        "cost": ["Water", "Water", "Water"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/2.png",
     "set": "Base Set"
@@ -30,9 +38,18 @@
     "name": "Chansey",
     "type": "Colorless",
     "hp": 120,
-    "rarity": "Rare",
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Double-Edge", "damage": "80" }
+      {
+        "name": "Scrunch",
+        "damage": "",
+        "cost": ["Colorless", "Colorless"]
+      },
+      {
+        "name": "Double-Edge",
+        "damage": "80",
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/3.png",
     "set": "Base Set"
@@ -43,9 +60,13 @@
     "type": "Fire",
     "hp": 120,
     "rarity": "Rare Holo",
+    "pokemon_power": "Energy Burn: As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Charizard is Asleep, Confused, or Paralyzed.",
     "attacks": [
-      { "name": "Slash", "damage": "40" },
-      { "name": "Fire Spin", "damage": "100" }
+      {
+        "name": "Fire Spin",
+        "damage": "100",
+        "cost": ["Fire", "Fire", "Fire", "Fire"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/4.png",
     "set": "Base Set"
@@ -54,10 +75,19 @@
     "id": "base1-5",
     "name": "Clefairy",
     "type": "Colorless",
-    "hp": 60,
-    "rarity": "Uncommon",
+    "hp": 40,
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Metronome", "damage": "10" }
+      {
+        "name": "Sing",
+        "damage": "",
+        "cost": ["Colorless"]
+      },
+      {
+        "name": "Metronome",
+        "damage": "",
+        "cost": ["Colorless", "Colorless", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/5.png",
     "set": "Base Set"
@@ -69,8 +99,16 @@
     "hp": 100,
     "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Bite", "damage": "30" },
-      { "name": "Dragon Rage", "damage": "40" }
+      {
+        "name": "Dragon Rage",
+        "damage": "50",
+        "cost": ["Water", "Water", "Water", "Water"]
+      },
+      {
+        "name": "Bubblebeam",
+        "damage": "40",
+        "cost": ["Water", "Water", "Water", "Water"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/6.png",
     "set": "Base Set"
@@ -82,8 +120,16 @@
     "hp": 70,
     "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Jab", "damage": "20" },
-      { "name": "Special Punch", "damage": "40" }
+      {
+        "name": "Jab",
+        "damage": "20",
+        "cost": ["Fighting"]
+      },
+      {
+        "name": "Special Punch",
+        "damage": "40",
+        "cost": ["Fighting", "Fighting", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/7.png",
     "set": "Base Set"
@@ -93,10 +139,14 @@
     "name": "Machamp",
     "type": "Fighting",
     "hp": 100,
-    "rarity": "Rare",
+    "rarity": "Rare Holo",
+    "pokemon_power": "Strikes Back: Whenever your opponent's attack damages Machamp (even if it Knocks Out Machamp), this power does 10 damage to the attacking Pokémon. This power can't be used if Machamp is Asleep, Confused, or Paralyzed.",
     "attacks": [
-      { "name": "Low Kick", "damage": "30" },
-      { "name": "Submission", "damage": "60" }
+      {
+        "name": "Seismic Toss",
+        "damage": "60",
+        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/8.png",
     "set": "Base Set"
@@ -106,10 +156,18 @@
     "name": "Magneton",
     "type": "Lightning",
     "hp": 60,
-    "rarity": "Rare",
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Sonicboom", "damage": "20" },
-      { "name": "Thunder Wave", "damage": "10" }
+      {
+        "name": "Thunder Wave",
+        "damage": "30",
+        "cost": ["Lightning", "Lightning", "Colorless"]
+      },
+      {
+        "name": "Selfdestruct",
+        "damage": "80",
+        "cost": ["Lightning", "Lightning", "Colorless", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/9.png",
     "set": "Base Set"
@@ -121,8 +179,16 @@
     "hp": 60,
     "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Barrier", "damage": "0" },
-      { "name": "Psychic", "damage": "30+" }
+      {
+        "name": "Psychic",
+        "damage": "10+",
+        "cost": ["Psychic", "Colorless"]
+      },
+      {
+        "name": "Barrier",
+        "damage": "",
+        "cost": ["Psychic", "Psychic"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/10.png",
     "set": "Base Set"
@@ -1141,6 +1207,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
