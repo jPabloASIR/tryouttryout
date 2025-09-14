@@ -196,12 +196,20 @@
   {
     "id": "base1-11",
     "name": "Nidoking",
-    "type": "Poison",
+    "type": "Grass",
     "hp": 90,
-    "rarity": "Rare",
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Horn Drill", "damage": "60" },
-      { "name": "Toxic", "damage": "30" }
+      {
+        "name": "Thrash",
+        "damage": "30+",
+        "cost": ["Grass", "Grass", "Colorless"]
+      },
+      {
+        "name": "Toxic",
+        "damage": "20",
+        "cost": ["Grass", "Grass", "Grass", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/11.png",
     "set": "Base Set"
@@ -210,11 +218,19 @@
     "id": "base1-12",
     "name": "Ninetales",
     "type": "Fire",
-    "hp": 60,
-    "rarity": "Rare",
+    "hp": 80,
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Confuse Ray", "damage": "10" },
-      { "name": "Flamethrower", "damage": "30" }
+      {
+        "name": "Lure",
+        "damage": "",
+        "cost": ["Colorless", "Colorless"]
+      },
+      {
+        "name": "Fire Blast",
+        "damage": "80",
+        "cost": ["Fire", "Fire", "Fire", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/12.png",
     "set": "Base Set"
@@ -224,10 +240,18 @@
     "name": "Poliwrath",
     "type": "Water",
     "hp": 90,
-    "rarity": "Rare",
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Bubblebeam", "damage": "30" },
-      { "name": "Hypnosis", "damage": "0" }
+      {
+        "name": "Water Gun",
+        "damage": "30+",
+        "cost": ["Water", "Water", "Colorless"]
+      },
+      {
+        "name": "Whirlpool",
+        "damage": "40",
+        "cost": ["Water", "Water", "Water", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/13.png",
     "set": "Base Set"
@@ -236,11 +260,19 @@
     "id": "base1-14",
     "name": "Raichu",
     "type": "Lightning",
-    "hp": 60,
-    "rarity": "Rare",
+    "hp": 80,
+    "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Thunderbolt", "damage": "60" },
-      { "name": "Thunder", "damage": "100" }
+      {
+        "name": "Agility",
+        "damage": "20",
+        "cost": ["Lightning", "Colorless", "Colorless"]
+      },
+      {
+        "name": "Thunder",
+        "damage": "60",
+        "cost": ["Lightning", "Lightning", "Lightning", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/14.png",
     "set": "Base Set"
@@ -249,11 +281,15 @@
     "id": "base1-15",
     "name": "Venusaur",
     "type": "Grass",
-    "hp": 80,
+    "hp": 100,
     "rarity": "Rare Holo",
+    "pokemon_power": "Energy Trans: As often as you like during your turn (before your attack), you may take 1 Grass Energy card attached to 1 of your Pokémon and attach it to a different one. This power can't be used if Venusaur is Asleep, Confused, or Paralyzed.",
     "attacks": [
-      { "name": "Razor Leaf", "damage": "40" },
-      { "name": "SolarBeam", "damage": "60" }
+      {
+        "name": "Solarbeam",
+        "damage": "60",
+        "cost": ["Grass", "Grass", "Grass", "Grass"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/15.png",
     "set": "Base Set"
@@ -265,8 +301,16 @@
     "hp": 90,
     "rarity": "Rare Holo",
     "attacks": [
-      { "name": "Thunder", "damage": "100" },
-      { "name": "Thunderbolt", "damage": "60" }
+      {
+        "name": "Thunder",
+        "damage": "60",
+        "cost": ["Lightning", "Lightning", "Lightning", "Colorless"]
+      },
+      {
+        "name": "Thunderbolt",
+        "damage": "100",
+        "cost": ["Lightning", "Lightning", "Lightning", "Lightning"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/16.png",
     "set": "Base Set"
@@ -278,8 +322,16 @@
     "hp": 80,
     "rarity": "Rare",
     "attacks": [
-      { "name": "Twineedle", "damage": "30" },
-      { "name": "Poison Sting", "damage": "10" }
+      {
+        "name": "Twineedle",
+        "damage": "30×",
+        "cost": ["Grass", "Grass", "Colorless"]
+      },
+      {
+        "name": "Poison Sting",
+        "damage": "40",
+        "cost": ["Grass", "Grass", "Grass", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/17.png",
     "set": "Base Set"
@@ -287,11 +339,20 @@
   {
     "id": "base1-18",
     "name": "Dragonair",
-    "type": "Dragon",
+    "type": "Colorless",
     "hp": 80,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "attacks": [
-      { "name": "Slam", "damage": "20" }
+      {
+        "name": "Slam",
+        "damage": "30×",
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
+      },
+      {
+        "name": "Hyper Beam",
+        "damage": "20",
+        "cost": ["Colorless", "Colorless", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/18.png",
     "set": "Base Set"
@@ -301,9 +362,18 @@
     "name": "Dugtrio",
     "type": "Fighting",
     "hp": 70,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "attacks": [
-      { "name": "Earthquake", "damage": "40" }
+      {
+        "name": "Slash",
+        "damage": "40",
+        "cost": ["Fighting", "Fighting", "Colorless"]
+      },
+      {
+        "name": "Earthquake",
+        "damage": "70",
+        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/19.png",
     "set": "Base Set"
@@ -313,10 +383,18 @@
     "name": "Electabuzz",
     "type": "Lightning",
     "hp": 70,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "attacks": [
-      { "name": "Thundershock", "damage": "10" },
-      { "name": "Thunderpunch", "damage": "30+" }
+      {
+        "name": "Thundershock",
+        "damage": "10",
+        "cost": ["Lightning"]
+      },
+      {
+        "name": "Thunderpunch",
+        "damage": "30+",
+        "cost": ["Lightning", "Colorless"]
+      }
     ],
     "image": "https://images.pokemontcg.io/base1/20.png",
     "set": "Base Set"
@@ -1207,6 +1285,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
