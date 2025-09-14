@@ -837,12 +837,186 @@
     "set": "Base Set" 
     },
   {
-  "id": "base1-77",
-  "name": "Potion",
-  "supertype": "Trainer",
-  "rarity": "Common",
-  "effect": "Remove up to 2 damage counters from one of your Pokémon.",
-  "image": "https://images.pokemontcg.io/base1/77.png",
-  "set": "Base Set"
-}
+    "id": "base1-77",
+    "name": "Defender",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20."
+  },
+  {
+    "id": "base1-78",
+    "name": "Energy Retrieval",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile."
+  },
+  {
+    "id": "base1-79",
+    "name": "Full Heal",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
+  },
+  {
+    "id": "base1-80",
+    "name": "Maintenance",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Shuffle 2 of the other cards from your hand into your deck in order to draw a card."
+  },
+  {
+    "id": "base1-81",
+    "name": "PlusPower",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Attach PlusPower to your Active Pokémon. Discard at the end of your turn. If this Pokémon's attack does damage, that attack does 10 more damage."
+  },
+  {
+    "id": "base1-82",
+    "name": "Pokémon Center",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Remove all damage counters from your Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon."
+  },
+  {
+    "id": "base1-83",
+    "name": "Pokémon Flute",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Choose 1 Basic Pokémon card from your opponent’s discard pile and put it onto his or her Bench."
+  },
+  {
+    "id": "base1-84",
+    "name": "Pokédex",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Look at up to 5 cards from the top of your deck and rearrange them as you like."
+  },
+  {
+    "id": "base1-85",
+    "name": "Professor Oak",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Discard your hand, then draw 7 cards."
+  },
+  {
+    "id": "base1-86",
+    "name": "Revive",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Put 1 Basic Pokémon card from your discard pile onto your Bench. Put half the HP of that Pokémon (rounded down to the nearest 10) as damage counters on that Pokémon."
+  },
+  {
+    "id": "base1-87",
+    "name": "Super Energy Removal",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Discard 1 Energy card attached to one of your Pokémon in order to choose 1 of your opponent’s Pokémon and up to 2 Energy cards attached to it. Discard those Energy cards."
+  },
+  {
+    "id": "base1-88",
+    "name": "Super Potion",
+    "supertype": "Trainer",
+    "rarity": "Uncommon",
+    "effect": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon."
+  },
+  {
+    "id": "base1-89",
+    "name": "Bill",
+    "supertype": "Trainer",
+    "rarity": "Common",
+    "effect": "Draw 2 cards."
+  },
+  {
+    "id": "base1-90",
+    "name": "Energy Removal",
+    "supertype": "Trainer",
+    "rarity": "Common",
+    "effect": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it."
+  },
+  {
+    "id": "base1-91",
+    "name": "Gust of Wind",
+    "supertype": "Trainer",
+    "rarity": "Common",
+    "effect": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon."
+  },
+  {
+    "id": "base1-92",
+    "name": "Potion",
+    "supertype": "Trainer",
+    "rarity": "Common",
+    "effect": "Remove up to 2 damage counters from 1 of your Pokémon."
+  },
+  {
+    "id": "base1-93",
+    "name": "Switch",
+    "supertype": "Trainer",
+    "rarity": "Common",
+    "effect": "Switch 1 of your Benched Pokémon with your Active Pokémon."
+  },
+  {
+    "id": "base1-94",
+    "name": "Item Finder",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Discard 2 of the other cards from your hand in order to put a Trainer card from your discard pile into your hand."
+  },
+  {
+    "id": "base1-95",
+    "name": "Lass",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "You and your opponent show each other your hands, then shuffle all Trainer cards from your hands into your decks."
+  },
+  {
+    "id": "base1-96",
+    "name": "Computer Search",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Discard 2 of the other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward."
+  },
+  {
+    "id": "base1-97",
+    "name": "Imposter Professor Oak",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Your opponent shuffles his or her hand into his or her deck, then draws 7 cards."
+  },
+  {
+    "id": "base1-98",
+    "name": "Pokémon Breeder",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. This counts as evolving that Pokémon."
+  },
+  {
+    "id": "base1-99",
+    "name": "Pokémon Trader",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Trade 1 of the Basic Pokémon or Evolution cards in your hand for one in your deck. Show both to your opponent. Shuffle your deck afterward."
+  },
+  {
+    "id": "base1-100",
+    "name": "Scoop Up",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Choose 1 of your Pokémon in play and return its Basic Pokémon card to your hand. Discard all cards attached to that card."
+  },
+  {
+    "id": "base1-101",
+    "name": "Clefairy Doll",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Play Clefairy Doll as if it were a Basic Pokémon. While in play, Clefairy Doll counts as a Pokémon instead of a Trainer card. Clefairy Doll has no attacks, can’t retreat, and can’t be affected by Special Conditions."
+  },
+  {
+    "id": "base1-102",
+    "name": "Devolution Spray",
+    "supertype": "Trainer",
+    "rarity": "Rare",
+    "effect": "Choose 1 of your evolved Pokémon. Take the highest Stage Evolution card from that Pokémon and put it into your hand."
+  }
 ]
+
