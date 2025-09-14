@@ -10,11 +10,30 @@
       {
         "name": "Confuse Ray",
         "damage": "30",
-        "cost": ["Psychic", "Psychic", "Psychic"]
+        "cost": [
+          "Psychic",
+          "Psychic",
+          "Psychic"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defending Pokémon is now Confused.",
+            "on_tails": null
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/1.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-2",
@@ -27,11 +46,31 @@
       {
         "name": "Hydro Pump",
         "damage": "40+",
-        "cost": ["Water", "Water", "Water"]
+        "cost": [
+          "Water",
+          "Water",
+          "Water"
+        ],
+        "description": "Does 40 damage plus 10 more damage for each Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+        "effects": {
+          "variable_damage": {
+            "base": 40,
+            "per_attached_energy": 10,
+            "energy_checked": "attached_to_this_pokemon_not_used_for_cost",
+            "note": "extra Water Energy after the 2nd doesn't count"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/2.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-3",
@@ -43,16 +82,46 @@
       {
         "name": "Scrunch",
         "damage": "",
-        "cost": ["Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage done to Chansey during opponent's next turn.",
+            "on_tails": null
+          }
+        }
       },
       {
         "name": "Double-Edge",
         "damage": "80",
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Chansey does 80 damage to itself.",
+        "effects": {
+          "self_damage": 80
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/3.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Psychic",
+      "value": "-30"
+    },
+    "retreat_cost": 1
   },
   {
     "id": "base1-4",
@@ -65,11 +134,30 @@
       {
         "name": "Fire Spin",
         "damage": "100",
-        "cost": ["Fire", "Fire", "Fire", "Fire"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Fire",
+          "Fire"
+        ],
+        "description": "Discard 2 Energy cards attached to Charizard in order to use this attack.",
+        "effects": {
+          "discard_energy_required": 2
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/4.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 3
   },
   {
     "id": "base1-5",
@@ -81,16 +169,46 @@
       {
         "name": "Sing",
         "damage": "",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defending Pokémon is now Asleep.",
+            "on_tails": null
+          }
+        }
       },
       {
         "name": "Metronome",
         "damage": "",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required to use that attack, such as discarding Energy cards.",
+        "effects": {
+          "copy_opponent_attack": {
+            "ignore_costs": true
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/5.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Psychic",
+      "value": "-30"
+    },
+    "retreat_cost": 1
   },
   {
     "id": "base1-6",
@@ -102,16 +220,45 @@
       {
         "name": "Dragon Rage",
         "damage": "50",
-        "cost": ["Water", "Water", "Water"]
+        "cost": [
+          "Water",
+          "Water",
+          "Water"
+        ],
+        "description": "Does 50 damage.",
+        "effects": {}
       },
       {
         "name": "Bubblebeam",
         "damage": "40",
-        "cost": ["Water", "Water", "Water", "Water"]
+        "cost": [
+          "Water",
+          "Water",
+          "Water",
+          "Water"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defending Pokémon is now Paralyzed.",
+            "on_tails": null
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/6.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 3
   },
   {
     "id": "base1-7",
@@ -123,16 +270,33 @@
       {
         "name": "Jab",
         "damage": "20",
-        "cost": ["Fighting"]
+        "cost": [
+          "Fighting"
+        ],
+        "description": null,
+        "effects": {}
       },
       {
         "name": "Special Punch",
         "damage": "40",
-        "cost": ["Fighting", "Fighting", "Colorless"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "description": null,
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/7.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-8",
@@ -145,11 +309,25 @@
       {
         "name": "Seismic Toss",
         "damage": "60",
-        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "description": null,
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/8.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-9",
@@ -161,16 +339,45 @@
       {
         "name": "Thunder Wave",
         "damage": "30",
-        "cost": ["Lightning", "Lightning", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defending Pokémon is now Paralyzed.",
+            "on_tails": null
+          }
+        }
       },
       {
         "name": "Selfdestruct",
         "damage": "80",
-        "cost": ["Lightning", "Lightning", "Colorless", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Does 20 damage to each Pokémon on each player's Bench. Magneton does 80 damage to itself.",
+        "effects": {
+          "bench_damage": 20,
+          "self_damage": 80
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/9.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-10",
@@ -182,16 +389,41 @@
       {
         "name": "Psychic",
         "damage": "10+",
-        "cost": ["Psychic", "Colorless"]
+        "cost": [
+          "Psychic",
+          "Colorless"
+        ],
+        "description": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.",
+        "effects": {
+          "variable_damage": {
+            "base": 10,
+            "per_defender_attached_energy": 10
+          }
+        }
       },
       {
         "name": "Barrier",
         "damage": "",
-        "cost": ["Psychic", "Psychic"]
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "description": "Discard 1 Psychic Energy card attached to Mewtwo in order to use this attack. During your opponent's next turn, prevent all effects of attacks, including damage, done to Mewtwo.",
+        "effects": {
+          "discard_energy_required": 1,
+          "prevents_all_effects_next_turn": true
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/10.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-11",
@@ -203,16 +435,44 @@
       {
         "name": "Thrash",
         "damage": "30+",
-        "cost": ["Grass", "Colorless", "Colorless"]
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, it does 30 damage and Nidoking does 10 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Deal 40 damage.",
+            "on_tails": "Deal 30 damage and 10 to self."
+          }
+        }
       },
       {
         "name": "Toxic",
         "damage": "20",
-        "cost": ["Grass", "Grass", "Grass"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ],
+        "description": "The Defending Pokémon is now Poisoned. It now takes 20 Poison damage after each player's turn (instead of 10).",
+        "effects": {
+          "status": "Poisoned",
+          "poison_damage": 20
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/11.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-12",
@@ -224,16 +484,39 @@
       {
         "name": "Lure",
         "damage": "",
-        "cost": ["Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon.",
+        "effects": {
+          "switch_opponent_bench": true
+        }
       },
       {
         "name": "Fire Blast",
         "damage": "80",
-        "cost": ["Fire", "Fire", "Fire", "Fire"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Fire",
+          "Fire"
+        ],
+        "description": "Discard 1 Fire Energy card attached to Ninetales in order to use this attack.",
+        "effects": {
+          "discard_energy_required": 1
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/12.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-13",
@@ -245,16 +528,43 @@
       {
         "name": "Water Gun",
         "damage": "30+",
-        "cost": ["Water", "Water", "Colorless"]
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "description": "Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+        "effects": {
+          "variable_damage": {
+            "base": 30,
+            "per_attached_energy": 10
+          }
+        }
       },
       {
         "name": "Whirlpool",
         "damage": "40",
-        "cost": ["Water", "Water", "Colorless", "Colorless"]
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "If the Defending Pokémon has any Energy cards attached to it, choose 1 and discard it.",
+        "effects": {
+          "discard_energy_from_defender": 1
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/13.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-14",
@@ -266,16 +576,47 @@
       {
         "name": "Agility",
         "damage": "20",
-        "cost": ["Lightning", "Colorless", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to Raichu during your opponent's next turn.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage and effects next turn.",
+            "on_tails": null
+          }
+        }
       },
       {
         "name": "Thunder",
         "damage": "60",
-        "cost": ["Lightning", "Lightning", "Lightning", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Lightning",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If tails, Raichu does 30 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "Self damage 30"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/14.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-15",
@@ -288,11 +629,28 @@
       {
         "name": "Solarbeam",
         "damage": "60",
-        "cost": ["Grass", "Grass", "Grass", "Grass"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass",
+          "Grass"
+        ]
+      },
+      {
+        "name": "SolarBeam",
+        "description": "Does 60 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/15.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-16",
@@ -304,16 +662,47 @@
       {
         "name": "Thunder",
         "damage": "60",
-        "cost": ["Lightning", "Lightning", "Lightning", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Lightning",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If tails, Zapdos does 30 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "Self damage 30"
+          }
+        }
       },
       {
         "name": "Thunderbolt",
         "damage": "100",
-        "cost": ["Lightning", "Lightning", "Lightning", "Lightning"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Lightning",
+          "Lightning"
+        ],
+        "description": "Discard all Energy cards attached to Zapdos in order to use this attack.",
+        "effects": {
+          "discard_all_energy": true
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/16.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Rock",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 3
   },
   {
     "id": "base1-17",
@@ -325,16 +714,45 @@
       {
         "name": "Twineedle",
         "damage": "30×",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 2,
+            "per_heads_damage": 30
+          }
+        }
       },
       {
         "name": "Poison Sting",
         "damage": "40",
-        "cost": ["Grass", "Grass", "Grass"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Poisoned"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/17.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 2",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 0
   },
   {
     "id": "base1-18",
@@ -346,16 +764,39 @@
       {
         "name": "Slam",
         "damage": "30×",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 2,
+            "per_heads_damage": 30
+          }
+        }
       },
       {
         "name": "Hyper Beam",
         "damage": "20",
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/18.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Colorless",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-19",
@@ -367,16 +808,49 @@
       {
         "name": "Slash",
         "damage": "40",
-        "cost": ["Fighting", "Fighting", "Colorless"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ]
       },
       {
         "name": "Earthquake",
         "damage": "70",
-        "cost": ["Fighting", "Fighting", "Fighting", "Fighting"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Fighting",
+          "Fighting"
+        ],
+        "description": "Does 70 damage. Does 10 damage to each of your own Benched Pokémon.",
+        "effects": {
+          "bench_damage_own": 10
+        }
+      },
+      {
+        "name": "Stone Barrage",
+        "description": "Flip a coin until you get tails. This attack does 20 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": "until_tails",
+            "per_heads_damage": 20
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/19.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Lightning",
+      "value": "-30"
+    },
+    "retreat_cost": 2
   },
   {
     "id": "base1-20",
@@ -388,16 +862,43 @@
       {
         "name": "Thundershock",
         "damage": "10",
-        "cost": ["Lightning"]
+        "cost": [
+          "Lightning"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       },
       {
         "name": "Thunderpunch",
         "damage": "30+",
-        "cost": ["Lightning", "Colorless"]
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, it does 30 damage and Electabuzz does 10 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Deal 40 damage",
+            "on_tails": "Deal 30 damage + 10 self damage"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/20.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-21",
@@ -410,11 +911,29 @@
       {
         "name": "Electric Shock",
         "damage": "50",
-        "cost": ["Lightning", "Lightning", "Lightning"]
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Lightning"
+        ],
+        "description": "Flip a coin. If tails, Electrode does 20 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "Self damage 20"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/21.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-22",
@@ -426,16 +945,41 @@
       {
         "name": "Whirlwind",
         "damage": "20",
-        "cost": ["Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "If your opponent has any Benched Pokémon, they switch 1 of them with the Defending Pokémon.",
+        "effects": {
+          "switch_opponent_bench": true
+        }
       },
       {
         "name": "Mirror Move",
         "damage": "",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "If Pidgeotto was attacked last turn, do the same damage and effects to the opponent's Active Pokémon.",
+        "effects": {
+          "mirror_last_attack": true
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/22.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 1
   },
   {
     "id": "base1-23",
@@ -447,16 +991,40 @@
       {
         "name": "Flamethrower",
         "damage": "50",
-        "cost": ["Fire", "Fire", "Colorless"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ],
+        "description": "Discard 1 Fire Energy attached to Arcanine to use this attack.",
+        "effects": {
+          "discard_energy_required": 1
+        }
       },
       {
         "name": "Take Down",
         "damage": "80",
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Arcanine does 30 damage to itself.",
+        "effects": {
+          "self_damage": 30
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/23.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-24",
@@ -468,16 +1036,37 @@
       {
         "name": "Slash",
         "damage": "30",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Does 30 damage.",
+        "effects": {}
       },
       {
         "name": "Flamethrower",
         "damage": "50",
-        "cost": ["Fire", "Fire", "Colorless"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ],
+        "description": "Discard 1 Fire Energy attached to Charmeleon to use this attack.",
+        "effects": {
+          "discard_energy_required": 1
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/24.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-25",
@@ -489,16 +1078,41 @@
       {
         "name": "Aurora Beam",
         "damage": "50",
-        "cost": ["Water", "Water", "Colorless"]
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "description": "Does 50 damage.",
+        "effects": {}
       },
       {
         "name": "Ice Beam",
         "damage": "30",
-        "cost": ["Water", "Water", "Colorless", "Colorless"]
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/25.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-26",
@@ -510,11 +1124,19 @@
       {
         "name": "Pound",
         "damage": "10",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Does 10 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/26.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": null,
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-27",
@@ -526,16 +1148,42 @@
       {
         "name": "Leek Slap",
         "damage": "30",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd remains your Active Pokémon.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "Attack fails"
+          },
+          "once_per_active": true
+        }
       },
       {
         "name": "Pot Smash",
         "damage": "30",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Does 30 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/27.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 1
   },
   {
     "id": "base1-28",
@@ -547,11 +1195,23 @@
       {
         "name": "Flare",
         "damage": "20",
-        "cost": ["Fire", "Colorless"]
+        "cost": [
+          "Fire",
+          "Colorless"
+        ],
+        "description": "Does 20 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/28.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-29",
@@ -563,16 +1223,38 @@
       {
         "name": "Hypnosis",
         "damage": "",
-        "cost": ["Psychic"]
+        "cost": [
+          "Psychic"
+        ],
+        "description": "The Defending Pokémon is now Asleep.",
+        "effects": {
+          "status": "Asleep"
+        }
       },
       {
         "name": "Dream Eater",
         "damage": "50",
-        "cost": ["Psychic", "Psychic"]
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "description": "Does 50 damage. Can only be used if the Defending Pokémon is Asleep.",
+        "effects": {
+          "conditional": {
+            "requires_status": "Asleep"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/29.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-30",
@@ -584,15 +1266,66 @@
       {
         "name": "Vine Whip",
         "damage": "30",
-        "cost": ["Grass", "Grass", "Colorless"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Colorless"
+        ],
+        "description": "Does 30 damage.",
+        "effects": {}
       },
       {
         "name": "Poisonpowder",
         "damage": "20",
-        "cost": ["Grass", "Grass", "Grass"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ]
+      },
+      {
+        "name": "Poison Powder",
+        "description": "The Defending Pokémon is now Poisoned.",
+        "effects": {
+          "status": "Poisoned"
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/30.png",
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
+  },
+  {
+    "id": "base1-31",
+    "name": "Jynx",
+    "type": "Psychic",
+    "hp": 70,
+    "rarity": "Uncommon",
+    "attacks": [
+      {
+        "name": "Doubleslap",
+        "damage": "10×",
+        "cost": [
+          "Psychic"
+        ]
+      },
+      {
+        "name": "Meditate",
+        "damage": "20+",
+        "cost": [
+          "Psychic",
+          "Psychic",
+          "Colorless"
+        ]
+      }
+    ],
+    "image": "https://images.pokemontcg.io/base1/31.png",
     "set": "Base Set"
   },
   {
@@ -605,16 +1338,43 @@
       {
         "name": "Doubleslap",
         "damage": "10×",
-        "cost": ["Psychic"]
+        "cost": [
+          "Psychic"
+        ],
+        "description": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 2,
+            "per_heads_damage": 10
+          }
+        }
       },
       {
         "name": "Meditate",
         "damage": "20+",
-        "cost": ["Psychic", "Psychic", "Colorless"]
+        "cost": [
+          "Psychic",
+          "Psychic",
+          "Colorless"
+        ],
+        "description": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+        "effects": {
+          "variable_damage": {
+            "base": 20,
+            "per_damage_counter": 10
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/31.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-32",
@@ -626,16 +1386,45 @@
       {
         "name": "Recover",
         "damage": "",
-        "cost": ["Psychic", "Psychic"]
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "description": "Discard 1 Psychic Energy card attached to Kadabra in order to use this power. Remove all damage counters from Kadabra.",
+        "effects": {
+          "discard_energy_required": 1,
+          "heal_all": true
+        }
       },
       {
         "name": "Super Psy",
         "damage": "50",
-        "cost": ["Psychic", "Psychic", "Colorless"]
+        "cost": [
+          "Psychic",
+          "Psychic",
+          "Colorless"
+        ]
+      },
+      {
+        "name": "Psyshock",
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/32.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-33",
@@ -647,16 +1436,39 @@
       {
         "name": "Stiffen",
         "damage": "",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage next turn"
+          }
+        }
       },
       {
         "name": "Poisonpowder",
         "damage": "20",
-        "cost": ["Grass", "Grass"]
+        "cost": [
+          "Grass",
+          "Grass"
+        ],
+        "description": "The Defending Pokémon is now Poisoned.",
+        "effects": {
+          "status": "Poisoned"
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/33.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-34",
@@ -668,16 +1480,43 @@
       {
         "name": "Karate Chop",
         "damage": "50-",
-        "cost": ["Fighting", "Fighting", "Colorless"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "description": "Does 50 damage minus 10 damage for each damage counter on Machoke.",
+        "effects": {
+          "variable_damage": {
+            "base": 50,
+            "minus_per_damage_counter": 10
+          }
+        }
       },
       {
         "name": "Submission",
         "damage": "60",
-        "cost": ["Fighting", "Fighting", "Colorless", "Colorless"]
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Machoke does 20 damage to itself.",
+        "effects": {
+          "self_damage": 20
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/34.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3
   },
   {
     "id": "base1-35",
@@ -689,16 +1528,35 @@
       {
         "name": "Tackle",
         "damage": "10",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Flail",
         "damage": "10×",
-        "cost": ["Water"]
+        "cost": [
+          "Water"
+        ],
+        "description": "Does 10 damage times the number of damage counters on Magikarp.",
+        "effects": {
+          "variable_damage": {
+            "per_damage_counter": 10
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/35.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-36",
@@ -710,16 +1568,47 @@
       {
         "name": "Fire Punch",
         "damage": "30",
-        "cost": ["Fire", "Fire"]
+        "cost": [
+          "Fire",
+          "Fire"
+        ]
       },
       {
         "name": "Flamethrower",
         "damage": "50",
-        "cost": ["Fire", "Fire", "Colorless"]
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ]
+      },
+      {
+        "name": "Smokescreen",
+        "description": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+        "effects": {
+          "status_effect": "Smokescreen"
+        }
+      },
+      {
+        "name": "Smog",
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Poisoned"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/36.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2
   },
   {
     "id": "base1-37",
@@ -731,16 +1620,47 @@
       {
         "name": "Double Kick",
         "damage": "30×",
-        "cost": ["Grass", "Colorless", "Colorless"]
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ]
       },
       {
         "name": "Horn Drill",
         "damage": "50",
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"]
+        "cost": [
+          "Grass",
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ]
+      },
+      {
+        "name": "Horn Attack",
+        "description": "Does 20 damage.",
+        "effects": {}
+      },
+      {
+        "name": "Fury Attack",
+        "description": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 3,
+            "per_heads_damage": 10
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/37.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-38",
@@ -752,16 +1672,44 @@
       {
         "name": "Amnesia",
         "damage": "",
-        "cost": ["Water", "Water"]
+        "cost": [
+          "Water",
+          "Water"
+        ],
+        "description": "Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
+        "effects": {
+          "disable_attack": true
+        }
       },
       {
         "name": "Doubleslap",
         "damage": "30×",
-        "cost": ["Water", "Water", "Colorless"]
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ]
+      },
+      {
+        "name": "DoubleSlap",
+        "description": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 2,
+            "per_heads_damage": 30
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/38.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-39",
@@ -773,16 +1721,39 @@
       {
         "name": "Conversion 1",
         "damage": "",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Choose 1 of the Defending Pokémon's Weaknesses. Porygon's type is now the same as that Weakness.",
+        "effects": {
+          "change_type_to_defender_weakness": true
+        }
       },
       {
         "name": "Conversion 2",
         "damage": "",
-        "cost": ["Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Choose 1 of the Defending Pokémon's Resistances. Porygon's type is now the same as that Resistance.",
+        "effects": {
+          "change_type_to_defender_resistance": true
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/39.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Basic",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Psychic",
+      "value": "-30"
+    },
+    "retreat_cost": 1
   },
   {
     "id": "base1-40",
@@ -794,16 +1765,35 @@
       {
         "name": "Bite",
         "damage": "20",
-        "cost": ["Colorless"]
+        "cost": [
+          "Colorless"
+        ],
+        "description": "Does 20 damage.",
+        "effects": {}
       },
       {
         "name": "Super Fang",
         "damage": "",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "description": "Does damage to the Defending Pokémon equal to half its remaining HP (rounded up to the nearest 10).",
+        "effects": {
+          "special_calc": "half_remaining_hp"
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/40.png",
-    "set": "Base Set"
+    "set": "Base Set",
+    "stage": "Stage 1",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1
   },
   {
     "id": "base1-41",
@@ -1639,6 +2629,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
