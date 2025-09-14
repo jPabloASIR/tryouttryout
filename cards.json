@@ -559,12 +559,16 @@
     "type": "Psychic",
     "hp": 60,
     "rarity": "Uncommon",
-    "pokemon_power": "Transparency: Whenever an attack does anything to Haunter, flip a coin. If heads, prevent all effects of that attack, including damage, done to Haunter. This power can't be used if Haunter is Asleep, Confused, or Paralyzed.",
     "attacks": [
       {
-        "name": "Nightmare",
-        "damage": "10",
-        "cost": ["Psychic", "Colorless"]
+        "name": "Hypnosis",
+        "damage": "",
+        "cost": ["Psychic"]
+      },
+      {
+        "name": "Dream Eater",
+        "damage": "50",
+        "cost": ["Psychic", "Psychic"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/29.png",
@@ -704,13 +708,13 @@
     "rarity": "Uncommon",
     "attacks": [
       {
-        "name": "Smokescreen",
-        "damage": "10",
-        "cost": ["Fire", "Colorless"]
+        "name": "Fire Punch",
+        "damage": "30",
+        "cost": ["Fire", "Fire"]
       },
       {
-        "name": "Smog",
-        "damage": "20",
+        "name": "Flamethrower",
+        "damage": "50",
         "cost": ["Fire", "Fire", "Colorless"]
       }
     ],
@@ -725,13 +729,13 @@
     "rarity": "Uncommon",
     "attacks": [
       {
-        "name": "Horn Attack",
-        "damage": "30",
+        "name": "Double Kick",
+        "damage": "30×",
         "cost": ["Grass", "Colorless", "Colorless"]
       },
       {
-        "name": "Fury Attack",
-        "damage": "30×",
+        "name": "Horn Drill",
+        "damage": "50",
         "cost": ["Grass", "Grass", "Colorless", "Colorless"]
       }
     ],
@@ -918,6 +922,11 @@
         "name": "Dig",
         "damage": "10",
         "cost": ["Fighting"]
+      },
+      {
+        "name": "Mud Slap",
+        "damage": "30",
+        "cost": ["Fighting", "Fighting"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/47.png",
@@ -968,14 +977,14 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Lick",
-        "damage": "10",
+        "name": "Sleeping Gas",
+        "damage": "",
         "cost": ["Psychic"]
       },
       {
-        "name": "Energy Conversion",
+        "name": "Destiny Bond",
         "damage": "",
-        "cost": ["Psychic"]
+        "cost": ["Psychic", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/50.png",
@@ -989,9 +998,9 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Smog",
+        "name": "Foul Gas",
         "damage": "10",
-        "cost": ["Grass"]
+        "cost": ["Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/51.png",
@@ -1024,6 +1033,11 @@
         "name": "Thunder Wave",
         "damage": "10",
         "cost": ["Lightning"]
+      },
+      {
+        "name": "Selfdestruct",
+        "damage": "40",
+        "cost": ["Lightning", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/53.png",
@@ -1037,9 +1051,14 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Harden",
+        "name": "Stiffen",
         "damage": "",
-        "cost": ["Colorless"]
+        "cost": ["Colorless", "Colorless"]
+      },
+      {
+        "name": "Stun Spore",
+        "damage": "20",
+        "cost": ["Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/54.png",
@@ -1053,8 +1072,8 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Horn Attack",
-        "damage": "10",
+        "name": "Horn Hazard",
+        "damage": "30",
         "cost": ["Grass"]
       }
     ],
@@ -1090,9 +1109,9 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Gust",
+        "name": "Whirlwind",
         "damage": "10",
-        "cost": ["Colorless"]
+        "cost": ["Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/57.png",
@@ -1106,9 +1125,14 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Thunder Jolt",
+        "name": "Gnaw",
         "damage": "10",
-        "cost": ["Lightning"]
+        "cost": ["Colorless"]
+      },
+      {
+        "name": "Thunder Jolt",
+        "damage": "30",
+        "cost": ["Lighting","Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/58.png",
@@ -1122,8 +1146,8 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Bubble",
-        "damage": "10",
+        "name": "Water Gun",
+        "damage": "10+",
         "cost": ["Water"]
       }
     ],
@@ -1139,8 +1163,13 @@
     "attacks": [
       {
         "name": "Smash Kick",
-        "damage": "10",
-        "cost": ["Fire"]
+        "damage": "20",
+        "cost": ["Colorless", "Colorless"]
+      },
+      {
+        "name": "Flame Tail",
+        "damage": "30",
+        "cost": ["Fire", "Fire"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/60.png",
@@ -1155,7 +1184,7 @@
     "attacks": [
       {
         "name": "Bite",
-        "damage": "10",
+        "damage": "20",
         "cost": ["Colorless"]
       }
     ],
@@ -1170,7 +1199,7 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Scratch",
+        "name": "Sand-attack",
         "damage": "10",
         "cost": ["Fighting"]
       }
@@ -1186,13 +1215,13 @@
     "rarity": "Rare",
     "attacks": [
       {
-        "name": "Withdraw",
-        "damage": "0",
+        "name": "Bubble",
+        "damage": "10",
         "cost": ["Water"]
       },
       {
-        "name": "Bubble",
-        "damage": "10",
+        "name": "Withdraw",
+        "damage": "",
         "cost": ["Water", "Colorless"]
       }
     ],
@@ -1207,9 +1236,14 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Swift",
+        "name": "Recover",
+        "damage": "",
+        "cost": ["Water", "Water"]
+      },
+      {
+        "name": "Star Freeze",
         "damage": "20",
-        "cost": ["Water", "Colorless"]
+        "cost": ["Water", "Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/64.png",
@@ -1223,8 +1257,8 @@
     "rarity": "Uncommon",
     "attacks": [
       {
-        "name": "Bind",
-        "damage": "10",
+        "name": "Slap",
+        "damage": "20",
         "cost": ["Water"]
       }
     ],
@@ -1240,8 +1274,13 @@
     "attacks": [
       {
         "name": "Bind",
-        "damage": "10",
+        "damage": "20",
         "cost": ["Grass", "Colorless"]
+      },
+      {
+        "name": "Poisonpowder",
+        "damage": "20",
+        "cost": ["Grass", "Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/66.png",
@@ -1257,7 +1296,7 @@
       {
         "name": "Tackle",
         "damage": "10",
-        "cost": ["Lightning"]
+        "cost": ["Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/67.png",
@@ -1271,9 +1310,9 @@
     "rarity": "Common",
     "attacks": [
       {
-        "name": "Flame Tail",
+        "name": "Confuse Ray",
         "damage": "10",
-        "cost": ["Fire"]
+        "cost": ["Fire", "Fire"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/68.png",
@@ -1600,6 +1639,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
