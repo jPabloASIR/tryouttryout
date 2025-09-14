@@ -1069,7 +1069,78 @@
     "effect": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
     "image": "https://images.pokemontcg.io/base1/95.png",
     "set": "Base Set"
+  },
+  {
+    "id": "base1-96",
+    "name": "Double Colorless Energy",
+    "supertype": "Energy",
+    "subtype": "Special",
+    "rarity": "Uncommon",
+    "effect": "Provides two Colorless Energy.",
+    "image": "https://images.pokemontcg.io/base1/96.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-97",
+    "name": "Fighting Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Fighting Energy.",
+    "image": "https://images.pokemontcg.io/base1/97.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-98",
+    "name": "Fire Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Fire Energy.",
+    "image": "https://images.pokemontcg.io/base1/98.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-99",
+    "name": "Grass Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Grass Energy.",
+    "image": "https://images.pokemontcg.io/base1/99.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-100",
+    "name": "Lightning Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Lightning Energy.",
+    "image": "https://images.pokemontcg.io/base1/100.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-101",
+    "name": "Psychic Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Psychic Energy.",
+    "image": "https://images.pokemontcg.io/base1/101.png",
+    "set": "Base Set"
+  },
+  {
+    "id": "base1-102",
+    "name": "Water Energy",
+    "supertype": "Energy",
+    "subtype": "Basic",
+    "rarity": "Basic Energy",
+    "effect": "Provides one Water Energy.",
+    "image": "https://images.pokemontcg.io/base1/102.png",
+    "set": "Base Set"
   }
 ]
+
 
 
