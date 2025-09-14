@@ -1146,7 +1146,6 @@
     "image": "https://images.pokemontcg.io/base1/60.png",
     "set": "Base Set"
   },
-  [
   {
     "id": "base1-61",
     "name": "Rattata",
@@ -1601,6 +1600,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
