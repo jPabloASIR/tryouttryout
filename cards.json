@@ -102,7 +102,7 @@
       {
         "name": "Dragon Rage",
         "damage": "50",
-        "cost": ["Water", "Water", "Water", "Water"]
+        "cost": ["Water", "Water", "Water"]
       },
       {
         "name": "Bubblebeam",
@@ -203,12 +203,12 @@
       {
         "name": "Thrash",
         "damage": "30+",
-        "cost": ["Grass", "Grass", "Colorless"]
+        "cost": ["Grass", "Colorless", "Colorless"]
       },
       {
         "name": "Toxic",
         "damage": "20",
-        "cost": ["Grass", "Grass", "Grass", "Colorless"]
+        "cost": ["Grass", "Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/11.png",
@@ -229,7 +229,7 @@
       {
         "name": "Fire Blast",
         "damage": "80",
-        "cost": ["Fire", "Fire", "Fire", "Colorless"]
+        "cost": ["Fire", "Fire", "Fire", "Fire"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/12.png",
@@ -250,7 +250,7 @@
       {
         "name": "Whirlpool",
         "damage": "40",
-        "cost": ["Water", "Water", "Water", "Colorless"]
+        "cost": ["Water", "Water", "Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/13.png",
@@ -325,12 +325,12 @@
       {
         "name": "Twineedle",
         "damage": "30×",
-        "cost": ["Grass", "Grass", "Colorless"]
+        "cost": ["Colorless", "Colorless", "Colorless"]
       },
       {
         "name": "Poison Sting",
         "damage": "40",
-        "cost": ["Grass", "Grass", "Grass", "Colorless"]
+        "cost": ["Grass", "Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/17.png",
@@ -346,12 +346,12 @@
       {
         "name": "Slam",
         "damage": "30×",
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
+        "cost": ["Colorless", "Colorless", "Colorless"]
       },
       {
         "name": "Hyper Beam",
         "damage": "20",
-        "cost": ["Colorless", "Colorless", "Colorless"]
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/18.png",
@@ -372,7 +372,7 @@
       {
         "name": "Earthquake",
         "damage": "70",
-        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"]
+        "cost": ["Fighting", "Fighting", "Fighting", "Fighting"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/19.png",
@@ -410,7 +410,7 @@
       {
         "name": "Electric Shock",
         "damage": "50",
-        "cost": ["Lightning", "Lightning", "Colorless"]
+        "cost": ["Lightning", "Lightning", "Lightning"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/21.png",
@@ -494,7 +494,7 @@
       {
         "name": "Ice Beam",
         "damage": "30",
-        "cost": ["Water", "Water", "Water", "Colorless"]
+        "cost": ["Water", "Water", "Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/25.png",
@@ -585,7 +585,7 @@
       {
         "name": "Poisonpowder",
         "damage": "20",
-        "cost": ["Grass", "Grass", "Grass", "Colorless"]
+        "cost": ["Grass", "Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/30.png",
@@ -601,7 +601,7 @@
       {
         "name": "Doubleslap",
         "damage": "10×",
-        "cost": ["Psychic", "Colorless"]
+        "cost": ["Psychic"]
       },
       {
         "name": "Meditate",
@@ -690,7 +690,7 @@
       {
         "name": "Flail",
         "damage": "10×",
-        "cost": ["Water", "Colorless"]
+        "cost": ["Water"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/35.png",
@@ -748,7 +748,7 @@
       {
         "name": "Amnesia",
         "damage": "",
-        "cost": ["Water", "Colorless"]
+        "cost": ["Water", "Water"]
       },
       {
         "name": "Doubleslap",
@@ -811,7 +811,7 @@
       {
         "name": "Headbutt",
         "damage": "10",
-        "cost": ["Water", "Colorless"]
+        "cost": ["Water"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/41.png",
@@ -832,7 +832,7 @@
       {
         "name": "Bite",
         "damage": "40",
-        "cost": ["Water", "Water", "Colorless"]
+        "cost": ["Water", "Colorless", "Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/42.png",
@@ -864,7 +864,7 @@
       {
         "name": "Leech Seed",
         "damage": "20",
-        "cost": ["Grass", "Colorless"]
+        "cost": ["Grass", "Grass"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/44.png",
@@ -933,7 +933,7 @@
       {
         "name": "Fury Attack",
         "damage": "10×",
-        "cost": ["Colorless", "Colorless"]
+        "cost": ["Colorless"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/48.png",
@@ -949,12 +949,12 @@
       {
         "name": "Pound",
         "damage": "10",
-        "cost": ["Psychic", "Colorless"]
+        "cost": ["Colorless"]
       },
       {
         "name": "Confuse Ray",
         "damage": "10",
-        "cost": ["Psychic", "Colorless", "Colorless"]
+        "cost": ["Psychic", "Psychic"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/49.png",
@@ -1006,7 +1006,7 @@
     "attacks": [
       {
         "name": "Low Kick",
-        "damage": "10",
+        "damage": "20",
         "cost": ["Fighting"]
       }
     ],
@@ -1076,7 +1076,7 @@
       {
         "name": "Harden",
         "damage": "",
-        "cost": ["Colorless"]
+        "cost": ["Fighting", "Fighting"]
       }
     ],
     "image": "https://images.pokemontcg.io/base1/56.png",
@@ -1600,6 +1600,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
