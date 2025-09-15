@@ -114,3 +114,46 @@ if (typeof window !== "undefined") {
   window.applyEffect = applyEffect;
   window.useAttack = useAttack;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function attack(player) {
+  if (currentPlayer !== player) {
+    log("No es tu turno!");
+    return;
+  }
+
+  // Suponemos que el primer Pokémon del campo es el activo
+  const attacker = fields[player][0];
+  const defender = fields[player === 1 ? 2 : 1][0];
+
+  if (!attacker || !defender) {
+    log("No hay Pokémon activo en alguno de los campos!");
+    return;
+  }
+
+  // Por ahora usamos siempre el primer ataque
+  const result = useAttack(attacker, 0, defender);
+  log(result);
+  renderFields(); // refresca la vida del defensor si la muestras
+}
