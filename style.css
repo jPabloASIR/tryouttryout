@@ -56,6 +56,7 @@ h1 {
 
 
 
+/* === Recuperar estilo original para el apartado "Cartas" === */
 /* Contenedor de cartas */
 #cards-grid {
   display: flex;
@@ -195,3 +196,4 @@ header h1{margin:6px 0;font-size:20px;text-align:center}
 .player-zone .actions button:hover {
   background-color: #222;   
 }
+
