@@ -1798,14 +1798,30 @@
   {
     "id": "base1-41",
     "name": "Seel",
+    "stage": "Basic",
     "type": "Water",
     "hp": 60,
-    "rarity": "Uncommon",
+    "rarity": "Common",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Headbutt",
         "damage": "10",
-        "cost": ["Water"]
+        "description": "Does 10 damage.",
+        "effects": {}
+      },
+      {
+        "name": "Growl",
+        "damage": "-",
+        "description": "During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 10.",
+        "effects": {
+          "reduce_damage_next_turn": 10
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/41.png",
@@ -1814,19 +1830,33 @@
   {
     "id": "base1-42",
     "name": "Wartortle",
+    "stage": "Stage 1",
     "type": "Water",
     "hp": 70,
     "rarity": "Uncommon",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Withdraw",
-        "damage": "",
-        "cost": ["Water", "Colorless"]
+        "damage": "-",
+        "description": "Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage next turn"
+          }
+        }
       },
       {
         "name": "Bite",
         "damage": "40",
-        "cost": ["Water", "Colorless", "Colorless"]
+        "description": "Does 40 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/42.png",
@@ -1835,14 +1865,35 @@
   {
     "id": "base1-43",
     "name": "Abra",
+    "stage": "Basic",
     "type": "Psychic",
     "hp": 30,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
+      {
+        "name": "Teleport",
+        "damage": "-",
+        "description": "Switch Abra with 1 of your Benched Pokémon.",
+        "effects": {
+          "switch_self_with_bench": true
+        }
+      },
       {
         "name": "Psyshock",
         "damage": "10",
-        "cost": ["Psychic"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/43.png",
@@ -1851,14 +1902,24 @@
   {
     "id": "base1-44",
     "name": "Bulbasaur",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Leech Seed",
         "damage": "20",
-        "cost": ["Grass", "Grass"]
+        "description": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur.",
+        "effects": {
+          "heal": 10
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/44.png",
@@ -1867,14 +1928,27 @@
   {
     "id": "base1-45",
     "name": "Caterpie",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "String Shot",
         "damage": "10",
-        "cost": ["Grass"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/45.png",
@@ -1883,19 +1957,30 @@
   {
     "id": "base1-46",
     "name": "Charmander",
+    "stage": "Basic",
     "type": "Fire",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Scratch",
         "damage": "10",
-        "cost": ["Colorless"]
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Ember",
         "damage": "30",
-        "cost": ["Fire", "Colorless"]
+        "description": "Discard 1 Fire Energy card attached to Charmander in order to use this attack.",
+        "effects": {
+          "discard_energy_required": 1
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/46.png",
@@ -1904,19 +1989,28 @@
   {
     "id": "base1-47",
     "name": "Diglett",
+    "stage": "Basic",
     "type": "Fighting",
     "hp": 30,
     "rarity": "Common",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 0,
     "attacks": [
       {
         "name": "Dig",
         "damage": "10",
-        "cost": ["Fighting"]
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Mud Slap",
         "damage": "30",
-        "cost": ["Fighting", "Fighting"]
+        "description": "Does 30 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/47.png",
@@ -1925,14 +2019,30 @@
   {
     "id": "base1-48",
     "name": "Doduo",
+    "stage": "Basic",
     "type": "Colorless",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 0,
     "attacks": [
       {
         "name": "Fury Attack",
-        "damage": "10×",
-        "cost": ["Colorless"]
+        "damage": "10x",
+        "description": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+        "effects": {
+          "coin_flip": {
+            "count": 2,
+            "per_heads_damage": 10
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/48.png",
@@ -1941,19 +2051,33 @@
   {
     "id": "base1-49",
     "name": "Drowzee",
+    "stage": "Basic",
     "type": "Psychic",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2,
     "attacks": [
       {
         "name": "Pound",
         "damage": "10",
-        "cost": ["Colorless"]
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Confuse Ray",
         "damage": "10",
-        "cost": ["Psychic", "Psychic"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Confused"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/49.png",
@@ -1962,19 +2086,36 @@
   {
     "id": "base1-50",
     "name": "Gastly",
+    "stage": "Basic",
     "type": "Psychic",
     "hp": 30,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 0,
     "attacks": [
       {
-        "name": "Sleeping Gas",
-        "damage": "",
-        "cost": ["Psychic"]
+        "name": "Lick",
+        "damage": "10",
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       },
       {
-        "name": "Destiny Bond",
-        "damage": "",
-        "cost": ["Psychic", "Colorless"]
+        "name": "Energy Conversion",
+        "damage": "-",
+        "description": "Put up to 2 Energy cards from your discard pile into your hand. Gastly does 10 damage to itself.",
+        "effects": {
+          "recover_energy_from_discard": 2,
+          "self_damage": 10
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/50.png",
@@ -2629,6 +2770,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
