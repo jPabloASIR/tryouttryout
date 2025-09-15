@@ -2124,14 +2124,28 @@
   {
     "id": "base1-51",
     "name": "Koffing",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Foul Gas",
         "damage": "10",
-        "cost": ["Grass", "Grass"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Poisoned",
+            "on_tails": "Defender is Confused"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/51.png",
@@ -2140,14 +2154,22 @@
   {
     "id": "base1-52",
     "name": "Machop",
+    "stage": "Basic",
     "type": "Fighting",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Low Kick",
         "damage": "20",
-        "cost": ["Fighting"]
+        "description": "Does 20 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/52.png",
@@ -2156,19 +2178,39 @@
   {
     "id": "base1-53",
     "name": "Magnemite",
+    "stage": "Basic",
     "type": "Lightning",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Psychic",
+      "value": "-30"
+    },
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Thunder Wave",
         "damage": "10",
-        "cost": ["Lightning"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       },
       {
         "name": "Selfdestruct",
         "damage": "40",
-        "cost": ["Lightning", "Colorless"]
+        "description": "Does 40 damage to each Pokémon on each player's Bench. Magnemite does 40 damage to itself.",
+        "effects": {
+          "bench_damage": 40,
+          "self_damage": 40
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/53.png",
@@ -2177,19 +2219,38 @@
   {
     "id": "base1-54",
     "name": "Metapod",
+    "stage": "Stage 1",
     "type": "Grass",
     "hp": 70,
-    "rarity": "Common",
+    "rarity": "Uncommon",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2,
     "attacks": [
       {
         "name": "Stiffen",
-        "damage": "",
-        "cost": ["Colorless", "Colorless"]
+        "damage": "-",
+        "description": "Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage next turn"
+          }
+        }
       },
       {
         "name": "Stun Spore",
         "damage": "20",
-        "cost": ["Grass", "Grass"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/54.png",
@@ -2198,14 +2259,27 @@
   {
     "id": "base1-55",
     "name": "Nidoran♂",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Psychic",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Horn Hazard",
         "damage": "30",
-        "cost": ["Grass"]
+        "description": "Flip a coin. If tails, this attack does nothing.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "attack does nothing"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/55.png",
@@ -2214,19 +2288,30 @@
   {
     "id": "base1-56",
     "name": "Onix",
+    "stage": "Basic",
     "type": "Fighting",
     "hp": 90,
-    "rarity": "Rare",
+    "rarity": "Common",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 3,
     "attacks": [
       {
         "name": "Rock Throw",
         "damage": "10",
-        "cost": ["Fighting"]
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Harden",
-        "damage": "",
-        "cost": ["Fighting", "Fighting"]
+        "damage": "-",
+        "description": "During your opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage.",
+        "effects": {
+          "prevent_damage_threshold": 30
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/56.png",
@@ -2235,14 +2320,27 @@
   {
     "id": "base1-57",
     "name": "Pidgey",
+    "stage": "Basic",
     "type": "Colorless",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": {
+      "type": "Fighting",
+      "value": "-30"
+    },
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Whirlwind",
         "damage": "10",
-        "cost": ["Colorless", "Colorless"]
+        "description": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon.",
+        "effects": {
+          "force_switch_defender": true
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/57.png",
@@ -2251,19 +2349,33 @@
   {
     "id": "base1-58",
     "name": "Pikachu",
+    "stage": "Basic",
     "type": "Lightning",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Gnaw",
         "damage": "10",
-        "cost": ["Colorless"]
+        "description": "Does 10 damage.",
+        "effects": {}
       },
       {
         "name": "Thunder Jolt",
         "damage": "30",
-        "cost": ["Lighting","Colorless"]
+        "description": "Flip a coin. If tails, Pikachu does 10 damage to itself.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_tails": "self_damage_10"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/58.png",
@@ -2272,14 +2384,28 @@
   {
     "id": "base1-59",
     "name": "Poliwag",
+    "stage": "Basic",
     "type": "Water",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Water Gun",
         "damage": "10+",
-        "cost": ["Water"]
+        "description": "Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Energy after the 2nd doesn't count.",
+        "effects": {
+          "variable_damage": {
+            "base": 10,
+            "extra_per_energy": 10,
+            "max_extra": 20
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/59.png",
@@ -2288,19 +2414,28 @@
   {
     "id": "base1-60",
     "name": "Ponyta",
+    "stage": "Basic",
     "type": "Fire",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Smash Kick",
         "damage": "20",
-        "cost": ["Colorless", "Colorless"]
+        "description": "Does 20 damage.",
+        "effects": {}
       },
       {
         "name": "Flame Tail",
         "damage": "30",
-        "cost": ["Fire", "Fire"]
+        "description": "Does 30 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/60.png",
@@ -2309,14 +2444,22 @@
   {
     "id": "base1-61",
     "name": "Rattata",
+    "stage": "Basic",
     "type": "Colorless",
     "hp": 30,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 0,
     "attacks": [
       {
         "name": "Bite",
         "damage": "20",
-        "cost": ["Colorless"]
+        "description": "Does 20 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/61.png",
@@ -2325,14 +2468,24 @@
   {
     "id": "base1-62",
     "name": "Sandshrew",
+    "stage": "Basic",
     "type": "Fighting",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Sand-attack",
         "damage": "10",
-        "cost": ["Fighting"]
+        "description": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+        "effects": {
+          "status_effect": "Sand-attack"
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/62.png",
@@ -2341,19 +2494,38 @@
   {
     "id": "base1-63",
     "name": "Squirtle",
+    "stage": "Basic",
     "type": "Water",
     "hp": 40,
-    "rarity": "Rare",
+    "rarity": "Common",
+    "weakness": {
+      "type": "Lightning",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Bubble",
         "damage": "10",
-        "cost": ["Water"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       },
       {
         "name": "Withdraw",
-        "damage": "",
-        "cost": ["Water", "Colorless"]
+        "damage": "-",
+        "description": "Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Prevent all damage next turn"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/63.png",
@@ -2362,19 +2534,36 @@
   {
     "id": "base1-64",
     "name": "Starmie",
+    "stage": "Stage 1",
     "type": "Water",
     "hp": 60,
-    "rarity": "Common",
+    "rarity": "Uncommon",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Recover",
-        "damage": "",
-        "cost": ["Water", "Water"]
+        "damage": "-",
+        "description": "Discard 1 Water Energy card attached to Starmie in order to use this attack. Remove all damage counters from Starmie.",
+        "effects": {
+          "discard_energy_required": 1,
+          "heal_all": true
+        }
       },
       {
         "name": "Star Freeze",
         "damage": "20",
-        "cost": ["Water", "Colorless", "Colorless"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/64.png",
@@ -2383,14 +2572,22 @@
   {
     "id": "base1-65",
     "name": "Staryu",
+    "stage": "Basic",
     "type": "Water",
     "hp": 40,
-    "rarity": "Uncommon",
+    "rarity": "Common",
+    "weakness": {
+      "type": "Grass",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Slap",
         "damage": "20",
-        "cost": ["Water"]
+        "description": "Does 20 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/65.png",
@@ -2399,19 +2596,35 @@
   {
     "id": "base1-66",
     "name": "Tangela",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 50,
-    "rarity": "Uncommon",
+    "rarity": "Common",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 2,
     "attacks": [
       {
         "name": "Bind",
         "damage": "20",
-        "cost": ["Grass", "Colorless"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Paralyzed"
+          }
+        }
       },
       {
         "name": "Poisonpowder",
         "damage": "20",
-        "cost": ["Grass", "Grass", "Grass"]
+        "description": "The Defending Pokémon is now Poisoned.",
+        "effects": {
+          "status": "Poisoned"
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/66.png",
@@ -2420,14 +2633,22 @@
   {
     "id": "base1-67",
     "name": "Voltorb",
+    "stage": "Basic",
     "type": "Lightning",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fighting",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Tackle",
         "damage": "10",
-        "cost": ["Colorless"]
+        "description": "Does 10 damage.",
+        "effects": {}
       }
     ],
     "image": "https://images.pokemontcg.io/base1/67.png",
@@ -2436,14 +2657,27 @@
   {
     "id": "base1-68",
     "name": "Vulpix",
+    "stage": "Basic",
     "type": "Fire",
     "hp": 50,
     "rarity": "Common",
+    "weakness": {
+      "type": "Water",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 1,
     "attacks": [
       {
         "name": "Confuse Ray",
         "damage": "10",
-        "cost": ["Fire", "Fire"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Confused"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/68.png",
@@ -2452,14 +2686,27 @@
   {
     "id": "base1-69",
     "name": "Weedle",
+    "stage": "Basic",
     "type": "Grass",
     "hp": 40,
     "rarity": "Common",
+    "weakness": {
+      "type": "Fire",
+      "value": "x2"
+    },
+    "resistance": null,
+    "retreat_cost": 0,
     "attacks": [
       {
         "name": "Poison Sting",
         "damage": "10",
-        "cost": ["Grass"]
+        "description": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+        "effects": {
+          "coin_flip": {
+            "count": 1,
+            "on_heads": "Defender is Poisoned"
+          }
+        }
       }
     ],
     "image": "https://images.pokemontcg.io/base1/69.png",
@@ -2770,6 +3017,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
