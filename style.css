@@ -1,247 +1,59 @@
-:root {
-  --bg: #2e7d32;         /* fondo verde */
+:root{
+  --bg: #2e7d32;
   --panel: #173d1f;
-  --card-width: 180px;   /* tamaño de cartas en sección Cartas */
-  --card-gap: 15px;
-  --card-w: 140px;       /* tamaño de cartas en mano/campo */
+  --card-w: 140px;
   --hand-h: 160px;
+  --card-width: 180px;
+  --card-gap: 15px;
 }
 
-* { 
-  box-sizing: border-box; 
-  font-family: Arial, Helvetica, sans-serif; 
-  color: #fff; 
-}
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#fff}
 
-body {
-  margin: 0;
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 8px;
-}
+body{margin:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px 8px}
+header h1{margin:6px 0;font-size:20px;text-align:center}
 
-h1 {
-  margin-top: 20px;
-  font-size: 20px;
-  text-align: center;
-}
+#game-area{width:100%;max-width:1200px;display:grid;grid-template-columns:1fr 320px 1fr;gap:12px;align-items:start}
 
-/* === Menús === */
-#menu-container, .submenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 60px;
-}
+/* Player area */
+.player-area{background:rgba(0,0,0,0.12);border-radius:10px;padding:10px;min-height:250px;display:flex;flex-direction:column;gap:8px}
+.player-area .player-header{display:flex;justify-content:space-between;align-items:center}
+.player-title{font-weight:bold}
+.meta span{font-size:12px;margin-left:8px;opacity:0.9}
 
-.submenu { display: none; }
+/* Field area: active + bench */
+.field-area{display:flex;flex-direction:column;align-items:center;gap:8px}
+.active-slot{width:280px;height:180px;border-radius:10px;background:linear-gradient(#111,#222);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.active-slot.empty{opacity:0.4;border:2px dashed rgba(255,255,255,0.08)}
 
-.nuevo-boton {
-  width: 250px;
-  padding: 15px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #1e1e1e, #333);
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  transition: all 0.2s ease-in-out;
-}
+.bench{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;padding:6px;align-items:center}
+.bench .card-visual{width:110px;height:140px}
 
-.nuevo-boton:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #444, #666);
-}
+/* Hand area: single row, scrollable */
+.hand-area{background:var(--panel);border-radius:8px;padding:8px}
+.hand{display:flex;gap:10px;align-items:center;overflow-x:auto;padding:6px;height:var(--hand-h)}
+.hand .card-visual{min-width:var(--card-w);height:140px;background:linear-gradient(#222,#111);border-radius:6px;padding:6px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:6px}
 
-.volver {
-  background: #8b0000;
-  color: #fff;
-}
-
-.volver:hover {
-  background: #b22222;
-}
-
-/* === Tablero === */
-#game-area {
-  width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 320px 1fr;
-  gap: 12px;
-  align-items: start;
-}
-
-.player-area {
-  background: rgba(0,0,0,0.12);
-  border-radius: 10px;
-  padding: 10px;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.player-area .player-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.player-title { font-weight: bold; }
-.meta span { font-size: 12px; margin-left: 8px; opacity: 0.9; }
-
-/* Campo: activo + banca */
-.field-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.active-slot {
-  width: 320px;
-  height: 200px;
-  border-radius: 10px;
-  background: linear-gradient(#111,#222);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-.active-slot.empty {
-  opacity: 0.4;
-  border: 2px dashed rgba(255,255,255,0.08);
-}
-
-.bench {
-  display: flex;
-  gap: 10px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 6px;
-  align-items: center;
-}
-
-.bench .card-visual { width: 110px; height: 140px; }
-
-/* Mano en fila */
-.hand-area {
-  background: var(--panel);
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.hand {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  overflow-x: auto;
-  padding: 6px;
-  height: var(--hand-h);
-}
-
-.hand .card-visual {
-  min-width: var(--card-w);
-  height: 140px;
-  background: linear-gradient(#222,#111);
-  border-radius: 6px;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Cartas (en tablero y mano) */
-.card-visual img.card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  flex: 0 0 auto;
-}
-.card-name { font-size: 12px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; }
-.card-hp { font-size: 12px; opacity: 0.9; }
-.card-energies { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
-.card-buttons { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
-.card-buttons button {
-  font-size: 11px;
-  padding: 4px 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  border: none;
-  background: #000;
-  color: #fff;
-}
+/* Card visuals */
+.card-visual img.card-img{width:100%;height:auto;border-radius:4px;flex:0 0 auto}
+.card-name{font-size:12px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%}
+.card-hp{font-size:12px;opacity:0.9}
+.card-energies{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+.card-buttons{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.card-buttons button{font-size:11px;padding:4px 6px;border-radius:6px;cursor:pointer;border:none;background-color:#000;color:#fff}
 
 /* Side panel */
-#side-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: stretch;
-}
+#side-panel{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.log{background:rgba(0,0,0,0.25);padding:8px;border-radius:8px;height:320px;overflow:auto;width:300px}
+#controls{display:flex;flex-direction:column;gap:8px;align-items:center;padding:6px}
+#controls button{background-color:#000;color:#fff;border:2px solid #444;padding:10px 15px;border-radius:8px;cursor:pointer;font-weight:bold;transition:background 0.2s ease}
+#controls button:hover{background-color:#222}
 
-.log {
-  background: rgba(0,0,0,0.25);
-  padding: 8px;
-  border-radius: 8px;
-  height: 320px;
-  overflow: auto;
-  width: 300px;
+/* Responsive tweak */
+@media (max-width:900px){
+  #game-area{grid-template-columns:1fr;grid-auto-rows:auto}
+  #side-panel{order:3}
+  .player-area{min-height:200px}
 }
-
-#controls {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  padding: 6px;
-}
-
-#controls button {
-  background-color: #000;   
-  color: #fff;              
-  border: 2px solid #444;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-#controls button:hover {
-  background-color: #222;   /* gris oscuro al pasar */
-}
-
-/* Responsive */
-@media (max-width:900px) {
-  #game-area { grid-template-columns: 1fr; grid-auto-rows: auto; }
-  #side-panel { order: 3; }
-  .player-area { min-height: 200px; }
-}
-
-/* Botones en partida */
-.player-zone .actions button {
-  background-color: #000;
-  color: #fff;
-  border: 2px solid #444;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-.player-zone .actions button:hover { background-color: #222; }
 
 /* === Cartas en el apartado "Cartas" === */
 #cards-grid {
@@ -260,7 +72,7 @@ h1 {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  justify-items: center;
+  justify-items: center; /* centra las cartas en su celda */
 }
 
 .card-item {
@@ -282,6 +94,8 @@ h1 {
   display: block;
   border-radius: 5px;
 }
+
+
 
 
 
