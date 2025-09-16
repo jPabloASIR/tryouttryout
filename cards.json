@@ -1313,33 +1313,6 @@
         "damage": "10×",
         "cost": [
           "Psychic"
-        ]
-      },
-      {
-        "name": "Meditate",
-        "damage": "20+",
-        "cost": [
-          "Psychic",
-          "Psychic",
-          "Colorless"
-        ]
-      }
-    ],
-    "image": "https://images.pokemontcg.io/base1/31.png",
-    "set": "Base Set"
-  },
-  {
-    "id": "base1-31",
-    "name": "Jynx",
-    "type": "Psychic",
-    "hp": 70,
-    "rarity": "Uncommon",
-    "attacks": [
-      {
-        "name": "Doubleslap",
-        "damage": "10×",
-        "cost": [
-          "Psychic"
         ],
         "description": "Flip 2 coins. This attack does 10 damage times the number of heads.",
         "effects": {
@@ -3017,6 +2990,7 @@
     "set": "Base Set"
   }
 ]
+
 
 
 
