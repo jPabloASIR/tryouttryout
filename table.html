@@ -2,31 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Playground TCG</title>
+  <title>Playground TCG - Fixed Board</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Playground TCG - 2 Jugadores</h1>
+    <h1>Playground TCG — 2 Players (Playtest)</h1>
   </header>
 
   <main id="game-area">
-    <!-- Jugador 2 -->
-    <section class="player-area" id="player2">
+    <section id="player2" class="player-area top">
       <div class="player-header">
-        <span class="player-title">Jugador 2</span>
+        <div class="player-title">Jugador 2</div>
+        <div class="meta">
+          <span id="deck-count-2">Deck: 0</span>
+          <span id="discard-count-2">Discard: 0</span>
+        </div>
       </div>
-      <div class="field-area">
-        <div class="active-slot" id="active2">Active Slot</div>
-        <div class="bench" id="bench2"></div>
+      <div class="field-area" id="field2">
+        <div class="active-slot" id="active-2"></div>
+        <div class="bench" id="bench-2"></div>
       </div>
-      <div class="hand-area">
+      <div class="hand-area" id="hand-area-2">
         <div class="hand" id="hand2"></div>
       </div>
+      <div class="actions" id="actions2"></div>
     </section>
 
-    <!-- Panel lateral -->
     <aside id="side-panel">
+      <div id="log" class="log">Game log...</div>
+      <div id="controls">
+        <button id="start-game">Start / Restart Game</button>
+        <div id="turn-indicator">Turn: -</div>
+      </div>
+
       <div id="log" class="log">Game log...</div>
       <div id="controls">
         <button id="start-game">Start / Restart Game</button>
@@ -35,25 +44,40 @@
       </div>
     </aside>
 
-    <!-- Jugador 1 -->
-    <section class="player-area" id="player1">
+    <section id="player1" class="player-area bottom">
       <div class="player-header">
-        <span class="player-title">Jugador 1</span>
+        <div class="player-title">Jugador 1</div>
+        <div class="meta">
+          <span id="deck-count-1">Deck: 0</span>
+          <span id="discard-count-1">Discard: 0</span>
+        </div>
       </div>
-      <div class="field-area">
-        <div class="active-slot" id="active1">Active Slot</div>
-        <div class="bench" id="bench1"></div>
+      <div class="field-area" id="field1">
+        <div class="active-slot" id="active-1"></div>
+        <div class="bench" id="bench-1"></div>
       </div>
-      <div class="hand-area">
+      <div class="hand-area" id="hand-area-1">
         <div class="hand" id="hand1"></div>
       </div>
+      <div class="actions" id="actions1"></div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <template id="card-template">
+    <div class="card-visual">
+      <img class="card-img" src="" alt="card">
+      <div class="card-name"></div>
+      <div class="card-hp"></div>
+      <div class="card-energies"></div>
+      <div class="card-buttons"></div>
+    </div>
+  </template>
+
   <script src="scriptAttack.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
