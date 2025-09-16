@@ -21,35 +21,6 @@ function checkEnergy(pokemon, attack) {
   return true;
 }
 
-
-
-
-function canAttack(pokemon, attack) {
-  if (!pokemon || !attack) return false;
-  if (!attack.cost || attack.cost.length === 0) return true; // ataques sin coste
-  let energies = pokemon.attachedEnergies || [];
-  return attack.cost.every(c => energies.includes(c));
-}
-
-function performAttack(attacker, defender, attack) {
-  if (!canAttack(attacker, attack)) {
-    alert(attacker.name + ' no tiene las energías necesarias para usar ' + attack.name);
-    return;
-  }
-  let damage = attack.damage || 0;
-  defender.hp -= damage;
-  if (defender.hp <= 0) {
-    alert(defender.name + ' fue debilitado!');
-  }
-}
-
-
-
-
-
-
-
-
 /**
  * Aplica resistencias, debilidades y devuelve el daño final
  * @param {Object} attacker - El Pokémon que ataca
@@ -144,45 +115,3 @@ if (typeof window !== "undefined") {
   window.useAttack = useAttack;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function attack(player) {
-  if (currentPlayer !== player) {
-    log("No es tu turno!");
-    return;
-  }
-
-  // Suponemos que el primer Pokémon del campo es el activo
-  const attacker = fields[player][0];
-  const defender = fields[player === 1 ? 2 : 1][0];
-
-  if (!attacker || !defender) {
-    log("No hay Pokémon activo en alguno de los campos!");
-    return;
-  }
-
-  // Por ahora usamos siempre el primer ataque
-  const result = useAttack(attacker, 0, defender);
-  log(result);
-  renderFields(); // refresca la vida del defensor si la muestras
-}
