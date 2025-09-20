@@ -1,4 +1,4 @@
-// === script.js fusionado con motor de ataques ===
+// === script.js fusionado y mejorado ===
 
 // -------------------- VARIABLES GLOBALES --------------------
 let decks = {1: [], 2: []};
@@ -19,7 +19,7 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
 }).catch(e=>{
   console.warn('cards.json not found, using dummy');
   for(let i=1;i<=60;i++){
-    allCards.push({id:'d'+i,name:'Card '+i,hp:50,stage:'Basic',type:'Colorless',attacks:[]});
+    allCards.push({id:'d'+i,name:'Card '+i,hp:50,stage:'Basic',type:'Colorless',attacks:[],image:''});
   }
   initGame();
 });
@@ -39,7 +39,7 @@ function initGame(){
   gameStarted = true;
   renderHands();
   renderFields();
-  log('Game initialized. Each player has 5 cards. Place a Basic Pokémon to active by clicking it in hand.');
+  log('Game initialized. Each player has 5 cards. Place a Basic Pokémon as Active.');
 }
 
 // -------------------- LOG --------------------
@@ -78,11 +78,11 @@ function renderHands(){
       const div = document.createElement('div');
       div.className = 'card';
       div.style.minWidth = '120px';
-      div.style.padding = '6px';
-      div.style.background = '#1e1e1e';
-      div.style.borderRadius = '6px';
       div.style.cursor = 'pointer';
-      div.innerHTML = `<div style="font-weight:bold">${card.name}</div><div style="font-size:12px">HP: ${card.hp||'-'}</div>`;
+      div.innerHTML = `
+        <img src="${card.image || ''}" alt="${card.name}" style="width:100px; border-radius:6px;">
+        <div style="font-weight:bold; font-size:12px">${card.name}</div>
+      `;
       div.onclick = ()=> playCard(p, idx);
       handDiv.appendChild(div);
     });
@@ -100,15 +100,22 @@ function renderFields(){
     activeBox.style.borderRadius = '8px';
     activeBox.style.padding = '8px';
     activeBox.style.marginBottom = '8px';
-    activeBox.style.minHeight = '120px';
+    activeBox.style.minHeight = '200px';
+    activeBox.style.display = 'flex';
+    activeBox.style.flexDirection = 'column';
+    activeBox.style.alignItems = 'center';
     if(fields[p].active){
       const inst = fields[p].active;
-      activeBox.innerHTML = `<div style="font-weight:bold">${inst.card.name} (Active)</div><div>HP: ${inst.currentHp}</div>`;
+      activeBox.innerHTML = `
+        <img src="${inst.card.image || ''}" alt="${inst.card.name}" style="width:150px; border-radius:8px;">
+        <div style="font-weight:bold">${inst.card.name} (Active)</div>
+        <div>HP: ${inst.currentHp}</div>
+      `;
       const btns = document.createElement('div'); btns.style.marginTop='6px';
       const attackBtn = document.createElement('button'); attackBtn.textContent='Attack'; attackBtn.onclick = ()=> attack(p);
-      const inspectBtn = document.createElement('button'); inspectBtn.textContent='Inspect'; inspectBtn.onclick = ()=> alert(JSON.stringify(inst.card,null,2));
       const evolveBtn = document.createElement('button'); evolveBtn.textContent='Evolve'; evolveBtn.onclick = ()=> evolveFromHand(p, 'active');
-      [attackBtn, inspectBtn, evolveBtn].forEach(b=>{ b.style.background='#000'; b.style.color='#fff'; b.style.marginRight='6px'; });
+      const inspectBtn = document.createElement('button'); inspectBtn.textContent='Inspect'; inspectBtn.onclick = ()=> alert(JSON.stringify(inst.card,null,2));
+      [attackBtn, evolveBtn, inspectBtn].forEach(b=>{ b.style.background='#000'; b.style.color='#fff'; b.style.margin='4px'; });
       btns.appendChild(attackBtn); btns.appendChild(evolveBtn); btns.appendChild(inspectBtn);
       activeBox.appendChild(btns);
     } else {
@@ -121,12 +128,16 @@ function renderFields(){
     benchBox.style.display='flex'; benchBox.style.gap='8px'; benchBox.style.flexWrap='wrap';
     for(let i=0;i<5;i++){
       const slot = document.createElement('div');
-      slot.style.minWidth='100px'; slot.style.minHeight='100px'; slot.style.border='1px dashed rgba(255,255,255,0.06)'; 
+      slot.style.minWidth='100px'; slot.style.minHeight='150px'; slot.style.border='1px dashed rgba(255,255,255,0.06)'; 
       slot.style.borderRadius='6px'; slot.style.display='flex'; slot.style.flexDirection='column'; 
       slot.style.alignItems='center'; slot.style.justifyContent='center';
       if(fields[p].bench[i]){
         const b = fields[p].bench[i];
-        slot.innerHTML = `<div style="font-weight:bold">${b.card.name}</div><div style="font-size:12px">HP: ${b.currentHp}</div>`;
+        slot.innerHTML = `
+          <img src="${b.card.image || ''}" alt="${b.card.name}" style="width:100px; border-radius:6px;">
+          <div style="font-size:12px; font-weight:bold">${b.card.name}</div>
+          <div style="font-size:12px">HP: ${b.currentHp}</div>
+        `;
         const btn = document.createElement('button'); btn.textContent='Make Active'; btn.style.background='#000'; btn.style.color='#fff'; btn.onclick = ()=> makeActive(p,i);
         slot.appendChild(btn);
       } else {
@@ -233,11 +244,13 @@ function attack(player){
 // -------------------- TURNOS --------------------
 function endTurn(){
   currentPlayer = currentPlayer===1?2:1;
-  log('Turn: Player '+currentPlayer);
+  drawCardAuto(currentPlayer); // <-- roba una carta al empezar turno
+  log('Turn: Player '+currentPlayer+' (drew a card)');
+  renderHands();
   renderFields();
 }
 
-// -------------------- MOTOR DE ATAQUES (fusionado de scriptAttack.js) --------------------
+// -------------------- MOTOR DE ATAQUES --------------------
 function checkEnergy(pokemon, attack){
   if(!attack || !attack.cost || attack.cost.length === 0) return true;
   const energyCopy = [...(pokemon.energies || [])];
@@ -301,6 +314,7 @@ function useAttack(attacker, attackIndex, defender){
 window.drawCard = drawCard;
 window.playCard = playCard;
 window.endTurn = endTurn;
+
 
 
 
