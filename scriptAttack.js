@@ -289,23 +289,57 @@ function attack(player){
 
 // -------------------- TURNOS --------------------
 function endTurn() {
-  // Cambiar turno
+  if (typeof gameStarted !== 'undefined' && !gameStarted) {
+    log('Game not started');
+    return;
+  }
+
+  // Cambiar jugador
   currentPlayer = currentPlayer === 1 ? 2 : 1;
 
-  // Log + indicador
+  // Mostrar en log y actualizar indicador
   log(`Turn of Player ${currentPlayer}`);
-  document.getElementById("turn-indicator").textContent = `Turn: Player ${currentPlayer}`;
+  const ti = document.getElementById('turn-indicator');
+  if (ti) ti.textContent = `Turn: Player ${currentPlayer}`;
 
-  // Robar carta automáticamente
-  if (decks[currentPlayer].length > 0) {
+  // Robar carta automáticamente al empezar el turno del nuevo jugador
+  if (decks[currentPlayer] && decks[currentPlayer].length > 0) {
     const card = decks[currentPlayer].shift();
     hands[currentPlayer].push(card);
     log(`Player ${currentPlayer} drew ${card.name}`);
-    renderHands();
   } else {
     log(`Player ${currentPlayer} cannot draw — deck is empty!`);
   }
+
+  // Re-render UI
+  if (typeof renderHands === 'function') renderHands();
+  if (typeof renderFields === 'function') renderFields();
 }
+
+// Aseguramos que la función esté expuesta globalmente
+window.endTurn = endTurn;
+
+// -------------------- Attach fallback listeners (por si el HTML no llama correctamente) --------------------
+document.addEventListener('DOMContentLoaded', () => {
+  // Si hay botones que contienen "Terminar turno" / "End Turn", les ponemos listener
+  document.querySelectorAll('button').forEach(btn => {
+    const t = (btn.textContent || '').trim().toLowerCase();
+    if (t === 'terminar turno' || t === 'end turn' || t === 'terminar' || t === 'end') {
+      // evitar añadir dos listeners si ya existe
+      if (!btn._endTurnBound) {
+        btn.addEventListener('click', (e) => { e.preventDefault(); endTurn(); });
+        btn._endTurnBound = true;
+      }
+    }
+  });
+
+  // Si tienes botón Start/Restart con id start-game, asegurar que llama a initGame
+  const startBtn = document.getElementById('start-game');
+  if (startBtn && !startBtn._startBound) {
+    startBtn.addEventListener('click', () => { if (typeof initGame === 'function') initGame(); });
+    startBtn._startBound = true;
+  }
+});
 
 
 // -------------------- MOTOR DE ATAQUES --------------------
