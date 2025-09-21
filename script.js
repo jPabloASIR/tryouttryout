@@ -33,11 +33,10 @@ function initGame(){
     fields[p] = { active: null, bench: [], discard: [] };
   }
 
-  // build decks from allCards (fallback a dummies si no hay allCards)
+  // build decks
   const pool = (Array.isArray(allCards) && allCards.length>0) ? allCards.slice() : null;
   for(let p=1;p<=2;p++){
     if(pool){
-      // shuffle pool copy and ensure >=40 cards
       const d = [];
       while(d.length < 40){
         const copy = pool.slice().sort(()=>Math.random()-0.5);
@@ -45,15 +44,13 @@ function initGame(){
       }
       decks[p] = d.slice(0, Math.min(60, d.length));
     } else {
-      // dummy deck
-      decks[p] = [];
       for(let i=1;i<=40;i++) {
         decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
       }
     } 
   }
 
-  // Repartir 6 Prize Cards a cada jugador
+  // Prize cards
   for (let i = 1; i <= 2; i++) {
     prizes[i] = [];
     for (let j = 0; j < 6; j++) {
@@ -64,19 +61,25 @@ function initGame(){
   }
   renderPrizes();  
 
-  // initial draw: 5 cards each (use drawCardAuto if present)
+  // initial draw
   for(let p=1;p<=2;p++){
     for(let i=0;i<5;i++){
       if (typeof drawCardAuto === 'function') drawCardAuto(p);
-      else {
-        if(decks[p].length > 0) hands[p].push(decks[p].shift());
-      }
+      else if(decks[p].length > 0) hands[p].push(decks[p].shift());
     }
   }
-    // Render inicial de manos, campos y UI
+
+  // estado inicial
+  currentPlayer = 1;
+  gameStarted = true;
+
+  // render UI
   renderHands();
   renderFields();
-  updateUI();
+  const ti = document.getElementById('turn-indicator');
+  if(ti) ti.textContent = `Turn: Player ${currentPlayer}`;
+  log(`Game started! Turn of Player ${currentPlayer}`);
+}
 
   // Empezar con el turno del Jugador 1
   currentPlayer = 1;
@@ -438,6 +441,7 @@ function renderPrizes() {
     });
   }
 }
+
 
 
 
