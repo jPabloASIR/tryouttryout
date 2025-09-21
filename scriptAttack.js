@@ -24,7 +24,6 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-
 function initGame(){
   // reset
   for(let p=1;p<=2;p++){
@@ -47,21 +46,22 @@ function initGame(){
     } else {
       // dummy deck
       decks[p] = [];
-      for(let i=1;i<=40;i++) decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
-    }
+      for(let i=1;i<=40;i++) {
+        decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
+      }
+    } 
   }
 
   // Repartir 6 Prize Cards a cada jugador
-for (let i = 1; i <= 2; i++) {
-  prizes[i] = [];
-  for (let j = 0; j < 6; j++) {
-    if (decks[i].length > 0) {
-      prizes[i].push(decks[i].shift());
+  for (let i = 1; i <= 2; i++) {
+    prizes[i] = [];
+    for (let j = 0; j < 6; j++) {
+      if (decks[i].length > 0) {
+        prizes[i].push(decks[i].shift());
+      }
     }
   }
-}
-renderPrizes();
-
+  renderPrizes();  
 
   // initial draw: 5 cards each (use drawCardAuto if present)
   for(let p=1;p<=2;p++){
@@ -72,6 +72,8 @@ renderPrizes();
       }
     }
   }
+}
+
 
   // initial state
   currentPlayer = 1;
