@@ -242,13 +242,25 @@ function attack(player){
 }
 
 // -------------------- TURNOS --------------------
-function endTurn(){
-  currentPlayer = currentPlayer===1?2:1;
-  drawCardAuto(currentPlayer); // <-- roba una carta al empezar turno
-  log('Turn: Player '+currentPlayer+' (drew a card)');
-  renderHands();
-  renderFields();
+function endTurn() {
+  // Cambiar turno
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+
+  // Log + indicador
+  log(`Turn of Player ${currentPlayer}`);
+  document.getElementById("turn-indicator").textContent = `Turn: Player ${currentPlayer}`;
+
+  // Robar carta automáticamente
+  if (decks[currentPlayer].length > 0) {
+    const card = decks[currentPlayer].shift();
+    hands[currentPlayer].push(card);
+    log(`Player ${currentPlayer} drew ${card.name}`);
+    renderHands();
+  } else {
+    log(`Player ${currentPlayer} cannot draw — deck is empty!`);
+  }
 }
+
 
 // -------------------- MOTOR DE ATAQUES --------------------
 function checkEnergy(pokemon, attack){
@@ -314,6 +326,7 @@ function useAttack(attacker, attackIndex, defender){
 window.drawCard = drawCard;
 window.playCard = playCard;
 window.endTurn = endTurn;
+
 
 
 
