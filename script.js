@@ -73,6 +73,15 @@ function initGame(){
       }
     }
   }
+    // Render inicial de manos, campos y UI
+  renderHands();
+  renderFields();
+  updateUI();
+
+  // Empezar con el turno del Jugador 1
+  currentPlayer = 1;
+  log("Game started! Turn of Player 1");
+
 }
 
 
@@ -429,6 +438,7 @@ function renderPrizes() {
     });
   }
 }
+
 
 
 
