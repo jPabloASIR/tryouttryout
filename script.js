@@ -24,18 +24,62 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-function initGame() {
-  initDecks();
-  hands[1] = [];
-  hands[2] = [];
-  fields[1] = [];
-  fields[2] = [];
+// reemplaza tu initGame() por esto
+function initGame(){
+  // reset
+  for(let p=1;p<=2;p++){
+    decks[p] = [];
+    hands[p] = [];
+    fields[p] = { active: null, bench: [], discard: [] };
+  }
+
+  // build decks from allCards (fallback a dummies si no hay allCards)
+  const pool = (Array.isArray(allCards) && allCards.length>0) ? allCards.slice() : null;
+  for(let p=1;p<=2;p++){
+    if(pool){
+      // shuffle pool copy and ensure >=40 cards
+      const d = [];
+      while(d.length < 40){
+        const copy = pool.slice().sort(()=>Math.random()-0.5);
+        d.push(...copy);
+      }
+      decks[p] = d.slice(0, Math.min(60, d.length));
+    } else {
+      // dummy deck
+      decks[p] = [];
+      for(let i=1;i<=40;i++) decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
+    }
+  }
+
+  // initial draw: 5 cards each (use drawCardAuto if present)
+  for(let p=1;p<=2;p++){
+    for(let i=0;i<5;i++){
+      if (typeof drawCardAuto === 'function') drawCardAuto(p);
+      else {
+        if(decks[p].length > 0) hands[p].push(decks[p].shift());
+      }
+    }
+  }
+
+  // initial state
   currentPlayer = 1;
-  log(`Turn of Player ${currentPlayer}`);
-  document.getElementById("turn-indicator").textContent = `Turn: Player ${currentPlayer}`;
+  gameStarted = true;
+
+  // update UI & log
   renderHands();
   renderFields();
+  log('Game initialized. Each player has 5 cards.');
+  const ti = document.getElementById('turn-indicator');
+  if(ti) ti.textContent = `Turn: Player ${currentPlayer}`;
+  log(`Turn of Player ${currentPlayer}`);
 }
+
+// conecta botón "Start / Restart Game" (añade esto una sola vez)
+const startBtn = document.getElementById('start-game');
+if(startBtn) startBtn.addEventListener('click', () => {
+  initGame();
+});
+
 
 
 // -------------------- LOG --------------------
@@ -322,6 +366,7 @@ function useAttack(attacker, attackIndex, defender){
 window.drawCard = drawCard;
 window.playCard = playCard;
 window.endTurn = endTurn;
+
 
 
 
