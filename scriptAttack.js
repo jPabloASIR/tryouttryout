@@ -51,6 +51,18 @@ function initGame(){
     }
   }
 
+  // Repartir 6 Prize Cards a cada jugador
+for (let i = 1; i <= 2; i++) {
+  prizes[i] = [];
+  for (let j = 0; j < 6; j++) {
+    if (decks[i].length > 0) {
+      prizes[i].push(decks[i].shift());
+    }
+  }
+}
+renderPrizes();
+
+
   // initial draw: 5 cards each (use drawCardAuto if present)
   for(let p=1;p<=2;p++){
     for(let i=0;i<5;i++){
@@ -406,3 +418,16 @@ function useAttack(attacker, attackIndex, defender){
 window.drawCard = drawCard;
 window.playCard = playCard;
 window.endTurn = endTurn;
+
+function renderPrizes() {
+  for (let i = 1; i <= 2; i++) {
+    const prizesDiv = document.getElementById(`prizes${i}`);
+    prizesDiv.innerHTML = '';
+    prizes[i].forEach(() => {
+      const img = document.createElement('img');
+      img.src = "https://images.pokemontcg.io/back.png"; // reverso genérico
+      prizesDiv.appendChild(img);
+    });
+  }
+}
+
