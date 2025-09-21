@@ -25,7 +25,6 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-
 function initGame(){
   // reset
   for(let p=1;p<=2;p++){
@@ -48,7 +47,9 @@ function initGame(){
     } else {
       // dummy deck
       decks[p] = [];
-      for(let i=1;i<=40;i++) decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
+      for(let i=1;i<=40;i++) {
+        decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
+      }
     } 
   }
 
@@ -62,8 +63,6 @@ function initGame(){
     }
   }
   renderPrizes();  
-}
-  
 
   // initial draw: 5 cards each (use drawCardAuto if present)
   for(let p=1;p<=2;p++){
@@ -74,6 +73,8 @@ function initGame(){
       }
     }
   }
+}
+
 
   // initial state
   currentPlayer = 1;
@@ -428,6 +429,7 @@ function renderPrizes() {
     });
   }
 }
+
 
 
 
