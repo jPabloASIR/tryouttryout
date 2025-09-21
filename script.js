@@ -87,7 +87,7 @@ function initGame(){
   const ti = document.getElementById('turn-indicator');
   if(ti) ti.textContent = `Turn: Player ${currentPlayer}`;
   log(`Turn of Player ${currentPlayer}`);
-}
+
 
 // conecta botón "Start / Restart Game" (añade esto una sola vez)
 const startBtn = document.getElementById('start-game');
@@ -429,6 +429,7 @@ function renderPrizes() {
     });
   }
 }
+
 
 
 
