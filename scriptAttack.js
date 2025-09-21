@@ -100,7 +100,7 @@ if(startBtn) startBtn.addEventListener('click', () => {
   renderHands();
   renderFields();
   log('Game initialized. Each player has 5 cards. Place a Basic Pokémon as Active.');
-}
+
 
 // -------------------- LOG --------------------
 function log(message){
