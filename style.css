@@ -287,6 +287,21 @@ h1 {
 
 
 
+/* Prize Cards */
+.prizes {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.prizes img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
 
 
 
