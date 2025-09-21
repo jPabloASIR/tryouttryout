@@ -24,23 +24,19 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-function initGame(){
-  for(let p=1;p<=2;p++){
-    let deck = [...allCards];
-    deck = deck.sort(()=>Math.random()-0.5);
-    decks[p] = deck.slice(0);
-    hands[p] = [];
-    fields[p].active = null;
-    fields[p].bench = [];
-    fields[p].discard = [];
-    for(let i=0;i<5;i++) drawCardAuto(p);
-  }
+function initGame() {
+  initDecks();
+  hands[1] = [];
+  hands[2] = [];
+  fields[1] = [];
+  fields[2] = [];
   currentPlayer = 1;
-  gameStarted = true;
+  log(`Turn of Player ${currentPlayer}`);
+  document.getElementById("turn-indicator").textContent = `Turn: Player ${currentPlayer}`;
   renderHands();
   renderFields();
-  log('Game initialized. Each player has 5 cards. Place a Basic Pokémon as Active.');
 }
+
 
 // -------------------- LOG --------------------
 function log(message){
@@ -326,6 +322,7 @@ function useAttack(attacker, attackIndex, defender){
 window.drawCard = drawCard;
 window.playCard = playCard;
 window.endTurn = endTurn;
+
 
 
 
