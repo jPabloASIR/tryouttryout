@@ -24,7 +24,7 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-// reemplaza tu initGame() por esto
+
 function initGame(){
   // reset
   for(let p=1;p<=2;p++){
