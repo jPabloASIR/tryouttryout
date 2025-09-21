@@ -3,6 +3,7 @@
 // -------------------- VARIABLES GLOBALES --------------------
 let decks = {1: [], 2: []};
 let hands = {1: [], 2: []};
+let prizes = {1: [], 2: []}; // prizes
 let fields = {
   1: { active: null, bench: [], discard: [] },
   2: { active: null, bench: [], discard: [] }
@@ -24,7 +25,7 @@ fetch('cards.json').then(r=>r.json()).then(data=>{
   initGame();
 });
 
-// reemplaza tu initGame() por esto
+
 function initGame(){
   // reset
   for(let p=1;p<=2;p++){
@@ -48,8 +49,21 @@ function initGame(){
       // dummy deck
       decks[p] = [];
       for(let i=1;i<=40;i++) decks[p].push({ id: 'dummy'+i, name: 'Dummy '+i, hp: 50, stage: 'Basic', image: '' });
+    } 
+  }
+
+  // Repartir 6 Prize Cards a cada jugador
+  for (let i = 1; i <= 2; i++) {
+    prizes[i] = [];
+    for (let j = 0; j < 6; j++) {
+      if (decks[i].length > 0) {
+        prizes[i].push(decks[i].shift());
+      }
     }
   }
+  renderPrizes();  
+}
+  
 
   // initial draw: 5 cards each (use drawCardAuto if present)
   for(let p=1;p<=2;p++){
@@ -402,6 +416,18 @@ window.playCard = playCard;
 window.endTurn = endTurn;
 
 
+
+function renderPrizes() {
+  for (let i = 1; i <= 2; i++) {
+    const prizesDiv = document.getElementById(`prizes${i}`);
+    prizesDiv.innerHTML = '';
+    prizes[i].forEach(() => {
+      const img = document.createElement('img');
+      img.src = "https://images.pokemontcg.io/back.png"; // reverso genérico
+      prizesDiv.appendChild(img);
+    });
+  }
+}
 
 
 
